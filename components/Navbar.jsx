@@ -12,19 +12,12 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          > */}
-          {/* <MenuIcon /> */}
-          {/* </IconButton> */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Frank Asplund
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Button variant="outlined">Primary 1</Button>
+          <Button variant="outlined">Primary 2</Button>
+          <Button variant="outlined">Primary 3</Button>
         </Toolbar>
       </AppBar>
     </Box>

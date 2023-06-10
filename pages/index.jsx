@@ -1,24 +1,59 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import App from "./_app";
+import Document from "./_document";
+import styles from "../styles/Home.module.css";
+
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
 import Navbar from "../components/Navbar";
+import Skills from "../components/Skills";
+
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import Grid from "@mui/material/Unstable_Grid2";
+import Box from "@mui/material/Box";
+
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Head>
         <title>Frank Asplund</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
 
       <main>
+        <Stack direction="row" spacing={2}>
+          <Avatar
+            src="/images/pfp.jpg"
+            sx={{ width: 300, height: 300 }}
+            alt="Frank Asplund"
+          />
+        </Stack>
         <h1>Frank Asplund</h1>
+        <h3>Front-end developer</h3>
+        <h4>
+          Dedicated and determined to deliver responsive, functional websites on
+          time.{" "}
+        </h4>
+
+        <Grid>
+          <Image
+            height={50}
+            width={50}
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+          />
+        </Grid>
+
+        <h1>My skills</h1>
+        <Skills />
       </main>
 
       {/* <footer>
@@ -32,14 +67,27 @@ export default function Home() {
         </a>
       </footer> */}
 
-      <style jsx>{`
-        main {
+      {/* main {
+          font-family: Roboto;
           padding: 5rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        } */}
+
+      <style jsx>{`
+        main {
+          font-family: Roboto;
+          padding: 5rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .container {
+          display: flex;
         }
         footer {
           width: 100%;
