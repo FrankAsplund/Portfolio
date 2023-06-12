@@ -15,7 +15,7 @@ import Box from "@mui/material/Box";
 
 export default function Skills() {
   return (
-    <div>
+    <main>
       {/* <Paper
         elevation={0}
         sx={{
@@ -25,22 +25,33 @@ export default function Skills() {
           flexGrow: 1,
         }}
       > */}
-      <Container>
+      <Container
+        sx={{
+          display: "grid",
+          mt: "6rem",
+
+          mb: "4rem",
+          justifyItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
         <Typography gutterBottom variant="h3">
-          My Skills
+          My skills
         </Typography>
         <Typography gutterBottom variant="h5">
           These are the technologies, frameworks, and languages I have
           experience in.
         </Typography>
       </Container>
-      <Box gridColumn="span 4">
+
+      <Container sx={{ mt: "2rem", mx: "0rem", mb: "4rem" }}>
+        {/* <Box gridColumn="span 8"> */}
         <Grid
           container
           rowSpacing={1}
-          spacing={4}
+          spacing={0}
           minHeight={160}
-          columns={4}
+          columns={2}
           justifyContent="center"
           alignItems="center"
         >
@@ -51,9 +62,10 @@ export default function Skills() {
             </Grid>
           ))}
         </Grid>
-      </Box>
-      {/* </Paper> */}
-    </div>
+        {/* </Box> */}
+        {/* </Paper> */}
+      </Container>
+    </main>
   );
 }
 

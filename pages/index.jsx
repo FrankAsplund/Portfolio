@@ -7,8 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Navbar from "../components/Navbar";
-import Skills from "../components/Skills";
 import Infobox from "../components/Infobox";
+import About from "../components/About";
+import Skills from "../components/Skills";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -35,6 +36,8 @@ export default function Home() {
       <main className="bg-grad">
         <Container>
           <Infobox />
+
+          <About />
 
           <Skills />
         </Container>

@@ -18,7 +18,7 @@ import { Typography } from "@mui/material";
 export default function Infobox() {
   return (
     <div>
-      <Container>
+      <Container sx={{ mt: "6rem", mx: "2rem", mb: "4rem" }}>
         {/* <Paper
         elevation={0}
         sx={{
