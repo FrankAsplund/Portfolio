@@ -16,33 +16,43 @@ import Box from "@mui/material/Box";
 export default function Skills() {
   return (
     <div>
-      <Paper
+      {/* <Paper
+        elevation={0}
         sx={{
           p: 2,
           margin: 2,
 
           flexGrow: 1,
         }}
-      >
-        <Box gridColumn="span 4">
-          <Grid
-            container
-            rowSpacing={1}
-            spacing={4}
-            minHeight={160}
-            columns={4}
-            justifyContent="center"
-            alignItems="center"
-          >
-            {skillsData.map((skill) => (
-              <Grid item spacing={4} p={2} m={2} key={skill.id}>
-                <Image height={75} width={75} src={skill.src} alt={skill.alt} />
-                <Typography variant="h6">{skill.alt}</Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Paper>
+      > */}
+      <Container>
+        <Typography gutterBottom variant="h3">
+          My Skills
+        </Typography>
+        <Typography gutterBottom variant="h5">
+          These are the technologies, frameworks, and languages I have
+          experience in.
+        </Typography>
+      </Container>
+      <Box gridColumn="span 4">
+        <Grid
+          container
+          rowSpacing={1}
+          spacing={4}
+          minHeight={160}
+          columns={4}
+          justifyContent="center"
+          alignItems="center"
+        >
+          {skillsData.map((skill) => (
+            <Grid item spacing={4} p={2} m={2} key={skill.id}>
+              <Image height={75} width={75} src={skill.src} alt={skill.alt} />
+              <Typography variant="h6">{skill.alt}</Typography>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+      {/* </Paper> */}
     </div>
   );
 }
@@ -135,10 +145,13 @@ const skillsData = [
   },
 ];
 
-<style jsx>
-  {`
-    main {
-      font-family: Roboto;
-    }
-  `}
-</style>;
+<style jsx>{`
+  main {
+    font-family: Roboto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+`}</style>;

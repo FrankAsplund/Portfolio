@@ -8,6 +8,7 @@ import Link from "next/link";
 
 import Navbar from "../components/Navbar";
 import Skills from "../components/Skills";
+import Infobox from "../components/Infobox";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -31,91 +32,13 @@ export default function Home() {
       </Head>
       <Navbar />
 
-      <main>
-        <Paper
-          elevation={2}
-          sx={{
-            p: 2,
-            m: 8,
-          }}
-        >
-          <Stack direction="row" spacing={8}>
-            <Avatar
-              src="/images/pfp.jpg"
-              sx={{ width: 300, height: 300 }}
-              alt="Frank Asplund"
-            />
+      <main className="bg-grad">
+        <Container>
+          <Infobox />
 
-            <Stack useFlexGap flexWrap="wrap">
-              <Typography gutterBottom variant="h1" m={0}>
-                Frank Asplund
-              </Typography>
-              <Typography gutterBottom variant="h3">
-                Front-end developer
-              </Typography>
-              <Typography gutterBottom variant="h5">
-                Dedicated and determined to deliver responsive, functional
-                websites on time.{" "}
-              </Typography>
-            </Stack>
-          </Stack>
-
-          {/* <Paper
-            elevation={24}
-            sx={{
-              p: 0,
-              m: 2,
-            }}
-          > */}
-          <Grid item container rowSpacing={4} px={8} m={2}>
-            <Link
-              href="https://www.linkedin.com/in/frank-asplund-794187221/"
-              underline="none"
-            >
-              <Image
-                height={50}
-                width={50}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-                alt="LinkedIn"
-              />
-            </Link>
-
-            <Link href="https://github.com/FrankAsplund" underline="none">
-              <Image
-                height={50}
-                width={50}
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                alt="Github"
-              />
-            </Link>
-          </Grid>
-        </Paper>
-        {/* </Paper> */}
-
-        <h1>My skills</h1>
-        <Skills />
+          <Skills />
+        </Container>
       </main>
-
-      {/* <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer> */}
-
-      {/* main {
-          font-family: Roboto;
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        } */}
 
       <style jsx>{`
         main {
@@ -125,6 +48,17 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        Container {
+          margin-top: 2rem;
+        }
+
+        .bg-grad {
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.741),
+            rgba(36, 58, 117, 0.769)
+          );
         }
       `}</style>
 
