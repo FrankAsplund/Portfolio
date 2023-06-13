@@ -13,23 +13,20 @@ import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 
-export default function Skills() {
-  return (
-    <main>
-      {/* <Paper
-        elevation={0}
-        sx={{
-          p: 2,
-          margin: 2,
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-          flexGrow: 1,
-        }}
-      > */}
+export default function Skills() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  return (
+    <main data-aos-delay="100" data-aos="fade-up" data-aos-duration="2000">
       <Container
         sx={{
           display: "grid",
           mt: "6rem",
-
           mb: "4rem",
           justifyItems: "center",
           flexWrap: "wrap",
@@ -45,7 +42,6 @@ export default function Skills() {
       </Container>
 
       <Container sx={{ mt: "2rem", mx: "0rem", mb: "4rem" }}>
-        {/* <Box gridColumn="span 8"> */}
         <Grid
           container
           rowSpacing={1}
@@ -58,12 +54,20 @@ export default function Skills() {
           {skillsData.map((skill) => (
             <Grid item spacing={4} p={2} m={2} key={skill.id}>
               <Image height={75} width={75} src={skill.src} alt={skill.alt} />
-              <Typography variant="h6">{skill.alt}</Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  display: "grid",
+                  mt: "10px",
+                  justifyItems: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                {skill.alt}
+              </Typography>
             </Grid>
           ))}
         </Grid>
-        {/* </Box> */}
-        {/* </Paper> */}
       </Container>
     </main>
   );

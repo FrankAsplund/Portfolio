@@ -7,17 +7,26 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function ButtonAppBar() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <Box sx={{ flexGrow: 1 }} elevation={0}>
+    <Box
+      sx={{ flexGrow: 1 }}
+      elevation={0}
+      data-aos="fade-down"
+      data-aos-duration="2000"
+    >
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
             Frank Asplund
           </Typography>
-          <Button variant="outlined">Primary 1</Button>
-          <Button variant="outlined">Primary 2</Button>
-          <Button variant="outlined">Primary 3</Button>
         </Toolbar>
       </AppBar>
     </Box>
