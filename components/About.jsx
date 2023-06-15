@@ -15,6 +15,7 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
 import { useEffect } from "react";
+import ReactFlipCard from "reactjs-flip-card";
 
 export default function About() {
   useEffect(() => {
@@ -47,24 +48,103 @@ export default function About() {
           justifyContent="center"
           alignItems="center"
         >
-          {aboutData.map((about) => (
-            <Grid item spacing={4} p={2} m={2} key={about.id}>
-              <Paper
-                elevation={24}
-                sx={{
-                  p: 8,
-                  mt: 8,
-                }}
-              >
-                <Avatar
-                  variant="rounded"
-                  src={about.src}
-                  sx={{ width: 150, height: 150 }}
-                  alt={about.alt}
-                />
-              </Paper>
-            </Grid>
-          ))}
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <ReactFlipCard
+                frontComponent={
+                  <div>
+                    <Avatar
+                      variant="rounded"
+                      src="/images/guitar.png"
+                      sx={{ width: 150, height: 150 }}
+                      alt="Pic"
+                    />
+                  </div>
+                }
+                backComponent={
+                  <div>
+                    <Typography gutterBottom variant="h5">
+                      I like to play guitar
+                    </Typography>
+                  </div>
+                }
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/home-cooked-meal.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/data.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/gym.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/cat.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
         </Grid>
       </Container>
       <style jsx>{`
@@ -85,26 +165,31 @@ const aboutData = [
   {
     id: 1,
     src: "/images/guitar.png",
+    text: "I like to play guitar",
     alt: "Guitar",
   },
   {
     id: 2,
     src: "/images/home-cooked-meal.png",
+    text: "I like to cook",
     alt: "Cooking",
   },
   {
     id: 3,
     src: "/images/data.png",
+    text: "I like to code",
     alt: "Coding",
   },
   {
     id: 4,
     src: "/images/gym.png",
+    text: "I like to work out",
     alt: "Gym",
   },
   {
     id: 5,
     src: "/images/cat.png",
+    text: "I like to play with my cats",
     alt: "Cat",
   },
 ];

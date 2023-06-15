@@ -25,7 +25,7 @@ export default function Infobox() {
   }, []);
   return (
     <div>
-      <Container sx={{ mt: "10rem", mx: "2rem", mb: "4rem" }}>
+      <Container sx={{ mt: "12rem", mx: "2rem", mb: "8rem" }}>
         <Stack direction="row" spacing={8}>
           <Avatar
             data-aos-delay="500"
