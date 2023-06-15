@@ -16,13 +16,13 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
-import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
+/* import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
-import { Typography } from "@mui/material";
+import { Typography } from "@mui/material"; */
 
 export default function Home() {
   return (

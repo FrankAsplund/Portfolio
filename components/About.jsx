@@ -14,13 +14,18 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
-import { useEffect } from "react";
-import ReactFlipCard from "reactjs-flip-card";
+import { useEffect, useState } from "react";
 
 export default function About() {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
   return (
     <main data-aos="zoom-in-up" data-aos-duration="4000">
       <Container
@@ -36,7 +41,7 @@ export default function About() {
           Hi!
         </Typography>
         <Typography gutterBottom variant="h5">
-          These are my interests
+          This is what I like to do on my free time.
         </Typography>
 
         <Grid
@@ -52,29 +57,43 @@ export default function About() {
             <Paper
               elevation={24}
               sx={{
+                width: 250,
+                height: 250,
                 p: 8,
                 mt: 8,
+                transform: `rotateY(${flipped ? 180 : 0}deg)`,
+                transition: "transform 1s",
               }}
+              onClick={handleFlip}
             >
-              <ReactFlipCard
-                frontComponent={
-                  <div>
-                    <Avatar
-                      variant="rounded"
-                      src="/images/guitar.png"
-                      sx={{ width: 150, height: 150 }}
-                      alt="Pic"
-                    />
-                  </div>
-                }
-                backComponent={
-                  <div>
-                    <Typography gutterBottom variant="h5">
-                      I like to play guitar
-                    </Typography>
-                  </div>
-                }
-              />
+              {flipped ? (
+                <div
+                  style={{
+                    backfaceVisibility: "hidden",
+                  }}
+                >
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    sx={{ textAlign: "center", transform: "rotateY(180deg)" }}
+                  >
+                    I like to play guitar
+                  </Typography>
+                </div>
+              ) : (
+                <div
+                  style={{
+                    backfaceVisibility: "hidden",
+                  }}
+                >
+                  <Avatar
+                    variant="rounded"
+                    src="/images/guitar.png"
+                    sx={{ width: 150, height: 150 }}
+                    alt="Pic"
+                  />
+                </div>
+              )}
             </Paper>
           </Grid>
 
@@ -160,6 +179,27 @@ export default function About() {
     </main>
   );
 }
+
+/* import { useEffect } from "react";
+import ReactFlipCard from "reactjs-flip-card";
+
+export default function About() {
+  return (
+    <main>
+
+                  <Avatar
+                    variant="rounded"
+                    src="/images/guitar.png"
+                    sx={{ width: 150, height: 150 }}
+                    alt="Pic"
+                  />
+                  <Typography gutterBottom variant="h5">
+                    I like to play guitar
+                  </Typography>
+              />
+    </main>
+  );
+} */
 
 const aboutData = [
   {
