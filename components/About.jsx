@@ -14,18 +14,21 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import ReactCardFlip from "react-card-flip";
 
-export default function About() {
+const About = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
 
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setFlipped(!flipped);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
   };
+
   return (
     <main data-aos="zoom-in-up" data-aos-duration="4000">
       <Container
@@ -53,29 +56,211 @@ export default function About() {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item spacing={4} p={2} m={2}>
-            <Paper
-              elevation={24}
-              sx={{
-                width: 250,
-                height: 250,
-                p: 8,
-                mt: 8,
-                transform: `rotateY(${flipped ? 180 : 0}deg)`,
-                transition: "transform 1s",
-              }}
-              onClick={handleFlip}
-            >
-              {flipped ? (
-                <div
-                  style={{
-                    backfaceVisibility: "hidden",
+          <Grid
+            item
+            spacing={4}
+            p={2}
+            m={2}
+            sx={{
+              width: 250,
+              height: 250,
+            }}
+          >
+            <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+              <div>
+                <Paper
+                  onClick={handleClick}
+                  elevation={24}
+                  sx={{
+                    p: 8,
+                  }}
+                >
+                  <Avatar
+                    variant="rounded"
+                    src="/images/guitar.png"
+                    sx={{ width: 150, height: 150 }}
+                    alt="Pic"
+                  />
+                </Paper>
+              </div>
+
+              <div>
+                <Paper
+                  onClick={handleClick}
+                  elevation={24}
+                  sx={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: 250,
+                    height: 250,
                   }}
                 >
                   <Typography
                     gutterBottom
                     variant="h5"
-                    sx={{ textAlign: "center", transform: "rotateY(180deg)" }}
+                    sx={{ width: 150, height: 150 }}
+                  >
+                    I like to play guitar
+                  </Typography>
+                </Paper>
+              </div>
+            </ReactCardFlip>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/home-cooked-meal.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/data.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/gym.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+
+          <Grid item spacing={4} p={2} m={2}>
+            <Paper
+              elevation={24}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+            >
+              <Avatar
+                variant="rounded"
+                src="/images/cat.png"
+                sx={{ width: 150, height: 150 }}
+                alt="Pic"
+              />
+            </Paper>
+          </Grid>
+        </Grid>
+      </Container>
+      <style jsx>{`
+        main {
+          font-family: Roboto;
+          padding: 2rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
+    </main>
+  );
+};
+
+export default About;
+
+/* export default function About() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
+  return ( */
+/* <main data-aos="zoom-in-up" data-aos-duration="4000">
+      <Container
+        sx={{
+          display: "grid",
+          mt: "6rem",
+          mb: "4rem",
+          justifyItems: "center",
+          flexWrap: "wrap",
+        }}
+      >
+        <Typography gutterBottom variant="h3">
+          Hi!
+        </Typography>
+        <Typography gutterBottom variant="h5">
+          This is what I like to do on my free time.
+        </Typography>
+
+        <Grid
+          container
+          rowSpacing={1}
+          spacing={0}
+          minHeight={160}
+          columns={2}
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid
+            item
+            spacing={4}
+            p={2}
+            m={2}
+            style={{
+              width: 250,
+              height: 250,
+              perspective: "1000px",
+              margin: "0 auto",
+              transformStyle: "preserve-3d",
+              transform: `rotateY(${flipped ? 180 : 0}deg)`,
+              transition: "transform 0.5s",
+            }}
+          >
+            <Paper
+              elevation={24}
+              style={{
+                backfaceVisibility: "hidden",
+              }}
+              sx={{
+                p: 8,
+                mt: 8,
+              }}
+              onClick={handleFlip}
+            >
+              {flipped ? (
+                <div>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    sx={{ textAlign: "center", transform: "rotateY(0deg)" }}
                   >
                     I like to play guitar
                   </Typography>
@@ -178,7 +363,7 @@ export default function About() {
       `}</style>
     </main>
   );
-}
+} */
 
 /* import { useEffect } from "react";
 import ReactFlipCard from "reactjs-flip-card";
@@ -201,7 +386,7 @@ export default function About() {
   );
 } */
 
-const aboutData = [
+/* const aboutData = [
   {
     id: 1,
     src: "/images/guitar.png",
@@ -232,4 +417,4 @@ const aboutData = [
     text: "I like to play with my cats",
     alt: "Cat",
   },
-];
+]; */

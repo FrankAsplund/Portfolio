@@ -64,8 +64,9 @@ export default function Infobox() {
           rowSpacing={4}
           px={8}
           m={2}
+          data-aos-delay="500"
           data-aos="fade-right"
-          data-aos-duration="6000"
+          data-aos-duration="3000"
         >
           <Link
             href="https://www.linkedin.com/in/frank-asplund-794187221/"

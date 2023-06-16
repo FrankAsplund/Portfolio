@@ -15,7 +15,7 @@
     "aos": "^3.0.0-beta.6",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "reactjs-flip-card": "^2.0.2"
+    "react-card-flip": "^1.2.0",
+    "react-dom": "18.2.0"
   }
 }
