@@ -56,16 +56,7 @@ const About = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <Grid
-            item
-            spacing={4}
-            p={2}
-            m={2}
-            sx={{
-              width: 250,
-              height: 250,
-            }}
-          >
+          <Grid item spacing={4} p={2} m={2} sx={{}}>
             <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
               <div>
                 <Paper
@@ -73,6 +64,8 @@ const About = () => {
                   elevation={24}
                   sx={{
                     p: 8,
+                    width: 278,
+                    height: 278,
                   }}
                 >
                   <Avatar
@@ -89,16 +82,23 @@ const About = () => {
                   onClick={handleClick}
                   elevation={24}
                   sx={{
+                    width: 278,
+                    height: 278,
+                    display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    width: 250,
-                    height: 250,
                   }}
                 >
                   <Typography
                     gutterBottom
                     variant="h5"
-                    sx={{ width: 150, height: 150 }}
+                    sx={{
+                      width: 150,
+                      height: 150,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     I like to play guitar
                   </Typography>
