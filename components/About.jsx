@@ -56,10 +56,10 @@ const About = () => {
         }}
       >
         <Typography gutterBottom variant="h3">
-          Hi!
+          Hobbies and interests
         </Typography>
         <Typography gutterBottom variant="h5">
-          This is what I like to do on my free time.
+          Click on each card to learn more about what I do on my free time.
         </Typography>
 
         <Grid
@@ -100,6 +100,7 @@ const About = () => {
                   onClick={() => handleClick(0)}
                   elevation={24}
                   sx={{
+                    py: 10,
                     width: 278,
                     height: 278,
                     display: "flex",
@@ -109,16 +110,19 @@ const About = () => {
                 >
                   <Typography
                     gutterBottom
-                    variant="h5"
+                    variant="body1"
                     sx={{
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 120,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    I like to play guitar
+                    Once I pick up my electric guitar, I can keep playing for
+                    several hours. I'll either learn a song I really like, or
+                    come up with melodies on my own, and jamming along with my
+                    trusty loop pedal.
                   </Typography>
                 </Paper>
               </div>

@@ -10,6 +10,8 @@ import Navbar from "../components/Navbar";
 import Infobox from "../components/Infobox";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -40,13 +42,15 @@ export default function Home() {
           <About />
 
           <Skills />
+
+          <Footer />
         </Container>
       </main>
 
       <style jsx>{`
         main {
           font-family: Roboto;
-          padding: 2rem 0;
+          padding: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
