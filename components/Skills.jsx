@@ -22,12 +22,17 @@ export default function Skills() {
     AOS.init();
   }, []);
   return (
-    <main data-aos-delay="100" data-aos="fade-up" data-aos-duration="2000">
+    <main
+      className="container-box"
+      data-aos-delay="100"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <Container
         sx={{
           display: "grid",
           mt: "6rem",
-          mb: "4rem",
+          mb: "1rem",
           justifyItems: "center",
           flexWrap: "wrap",
         }}
@@ -40,7 +45,6 @@ export default function Skills() {
           experience in.
         </Typography>
       </Container>
-
       <Container sx={{ mt: "2rem", mx: "0rem", mb: "4rem" }}>
         <Grid
           container
@@ -53,22 +57,34 @@ export default function Skills() {
         >
           {skillsData.map((skill) => (
             <Grid item spacing={4} p={2} m={2} key={skill.id}>
-              <Image height={75} width={75} src={skill.src} alt={skill.alt} />
-              <Typography
-                variant="h6"
-                sx={{
-                  display: "grid",
-                  mt: "10px",
-                  justifyItems: "center",
-                  flexWrap: "wrap",
-                }}
-              >
-                {skill.alt}
-              </Typography>
+              <div className="hover">
+                <Image height={75} width={75} src={skill.src} alt={skill.alt} />
+                <Typography
+                  variant="h6"
+                  sx={{
+                    display: "grid",
+                    mt: "10px",
+                    justifyItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  {skill.alt}
+                </Typography>
+              </div>
             </Grid>
           ))}
         </Grid>
       </Container>
+      <style jsx>{`
+        main {
+          font-family: Roboto;
+          padding: 2rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
     </main>
   );
 }
@@ -160,14 +176,3 @@ const skillsData = [
     alt: "MySQL",
   },
 ];
-
-<style jsx>{`
-  main {
-    font-family: Roboto;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-`}</style>;

@@ -16,19 +16,23 @@ export default function ButtonAppBar() {
     AOS.init();
   }, []);
   return (
-    <Box
-      sx={{ flexGrow: 1 }}
-      elevation={0}
-      data-aos="fade-down"
-      data-aos-duration="2000"
-    >
-      <AppBar position="static">
+    <main>
+      <AppBar position="static" className="glass">
         <Toolbar>
-          <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h3"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              height: 100,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             Frank Asplund
           </Typography>
         </Toolbar>
       </AppBar>
-    </Box>
+    </main>
   );
 }

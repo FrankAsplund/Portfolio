@@ -12,6 +12,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Arrow from "../components/Arrow";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -33,18 +34,15 @@ export default function Home() {
         <title>Frank Asplund</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
 
       <main className="bg-grad">
+        <Navbar />
         <Container>
           <Infobox />
-
           <About />
-
           <Skills />
-
-          <Footer />
         </Container>
+        <Footer />
       </main>
 
       <style jsx>{`
@@ -60,13 +58,6 @@ export default function Home() {
         Container {
           margin-top: 2rem;
         }
-
-        .bg-grad {
-          background-image: linear-gradient(
-            rgba(0, 0, 0, 0.741),
-            rgba(36, 58, 117, 0.769)
-          );
-        }
       `}</style>
 
       <style jsx global>{`
@@ -77,7 +68,58 @@ export default function Home() {
         * {
           box-sizing: border-box;
         }
+
+        .bg-grad {
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.741),
+            rgba(36, 58, 117, 0.769)
+          );
+        }
+
+        .container-box {
+          min-height: 100vh;
+        }
+
+        .box {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .glass {
+          /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(2.8px);
+          -webkit-backdrop-filter: blur(2.8px);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hover {
+          transition: transform 0.15s;
+        }
+
+        .hover:hover {
+          transform: scale(1.2);
+        }
+
+        .hoverShadow {
+          transition: transform 0.15s;
+        }
+
+        .hoverShadow:hover {
+          transform: scale(1.03);
+          box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
+        }
+
+        @media only screen and (max-width: 900px) {
+          .box {
+            display: flex;
+            flex-direction: column;
+          }
+        }
       `}</style>
+      {/* rgba(36, 58, 117, 0.769); */}
     </div>
   );
 }

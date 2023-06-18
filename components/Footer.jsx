@@ -21,17 +21,19 @@ const handleScrollTotop = () => {
 };
 
 export default function Footer() {
-  /* useEffect(() => {
+  useEffect(() => {
     AOS.init();
-  }, []); */
+  }, []);
   return (
-    <footer>
+    <main>
+      {/* <div className="footer"> */}
       <AppBar
         position="static"
+        className="glass footer"
         sx={{
-          height: 100,
-          display: "flex",
-          flexDirection: "row",
+          /* height: 100, */
+          /* display: "flex",
+            flexDirection: "row", */
           alignItems: "center",
           justifyContent: "space-between",
         }}
@@ -43,9 +45,16 @@ export default function Footer() {
         </Grid>
 
         <Grid item spacing={4} p={2} m={2}>
-          <Typography variant="h5" component="div">
-            This project was created in React.js, and Next.js with Material UI
-            components.
+          <Typography
+            variant="body1"
+            sx={{
+              height: 30,
+              px: 2,
+            }}
+            component="div"
+          >
+            This project was created in Visual Studio Code with React.js, and
+            Next.js with Material UI components.
           </Typography>
         </Grid>
 
@@ -55,7 +64,7 @@ export default function Footer() {
           </Link>
         </Grid> */}
 
-        <Grid className="arrow" item spacing={4} p={2} m={2}>
+        <Grid className="hoverShadow" item spacing={4} p={2} m={2}>
           <Avatar
             onClick={handleScrollTotop}
             src="/images/up-arrow.png"
@@ -67,27 +76,22 @@ export default function Footer() {
           />
         </Grid>
       </AppBar>
+      {/* </div> */}
       <style jsx>{`
-        footer {
-          background: #0f0f0f;
+        .footer {
+          max-height: 100px;
+          display: flex;
+          flex-direction: row;
         }
 
-        .arrow {
-        }
-
-        .arrow:hover {
-          padding: 2px;
-          border: solid 1px;
-          background: #0f0f0f;
-          border-radius: 2px;
-        }
-
-        .arrow:hover,
-        .arrow:focus {
-          background-color: #fff;
-          color: #333;
+        @media only screen and (max-width: 900px) {
+          .footer {
+            max-height: auto;
+            display: flex;
+            flex-direction: column;
+          }
         }
       `}</style>
-    </footer>
+    </main>
   );
 }

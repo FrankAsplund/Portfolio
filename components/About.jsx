@@ -45,7 +45,11 @@ const About = () => {
   };
 
   return (
-    <main data-aos="zoom-in-up" data-aos-duration="4000">
+    <main
+      className="container-box"
+      data-aos="zoom-in-up"
+      data-aos-duration="4000"
+    >
       <Container
         sx={{
           display: "grid",
@@ -71,14 +75,75 @@ const About = () => {
           justifyContent="center"
           alignItems="center"
         >
+          {/* <div className="hoverShadow"> */}
           <Grid item spacing={4} p={2} m={2}>
             <ReactCardFlip
               isFlipped={cardStates[0].isFlipped}
               flipDirection="horizontal"
             >
+              <Paper
+                onClick={() => handleClick(0)}
+                elevation={24}
+                className="glass"
+                sx={{
+                  p: 8,
+                  width: 278,
+                  height: 278,
+                }}
+              >
+                <Avatar
+                  variant="rounded"
+                  src="/images/guitar.png"
+                  sx={{ width: 150, height: 150 }}
+                  alt="Pic"
+                />
+              </Paper>
+              {/* </div> */}
+
+              {/* <div className="hoverShadow"> */}
+              <Paper
+                onClick={() => handleClick(0)}
+                className="glass"
+                elevation={24}
+                sx={{
+                  py: 10,
+                  width: 278,
+                  height: 278,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <Typography
+                  gutterBottom
+                  variant="body1"
+                  sx={{
+                    width: 180,
+                    height: 120,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  I love playing my electric guitar. I'll either learn a song I
+                  really like, or come up with melodies on my own, and jamming
+                  along with my trusty loop pedal.
+                </Typography>
+              </Paper>
+              {/* </div> */}
+            </ReactCardFlip>
+          </Grid>
+          {/* </div> */}
+
+          <Grid item spacing={4} p={2} m={2}>
+            <ReactCardFlip
+              isFlipped={cardStates[1].isFlipped}
+              flipDirection="horizontal"
+            >
               <div>
                 <Paper
-                  onClick={() => handleClick(0)}
+                  onClick={() => handleClick(1)}
+                  className="glass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -88,7 +153,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/guitar.png"
+                    src="/images/home-cooked-meal.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Pic"
                   />
@@ -97,7 +162,8 @@ const About = () => {
 
               <div>
                 <Paper
-                  onClick={() => handleClick(0)}
+                  onClick={() => handleClick(1)}
+                  className="glass"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -119,64 +185,10 @@ const About = () => {
                       alignItems: "center",
                     }}
                   >
-                    Once I pick up my electric guitar, I can keep playing for
-                    several hours. I'll either learn a song I really like, or
-                    come up with melodies on my own, and jamming along with my
-                    trusty loop pedal.
-                  </Typography>
-                </Paper>
-              </div>
-            </ReactCardFlip>
-          </Grid>
-
-          <Grid item spacing={4} p={2} m={2}>
-            <ReactCardFlip
-              isFlipped={cardStates[1].isFlipped}
-              flipDirection="horizontal"
-            >
-              <div>
-                <Paper
-                  onClick={() => handleClick(1)}
-                  elevation={24}
-                  sx={{
-                    p: 8,
-                    width: 278,
-                    height: 278,
-                  }}
-                >
-                  <Avatar
-                    variant="rounded"
-                    src="/images/home-cooked-meal.png"
-                    sx={{ width: 150, height: 150 }}
-                    alt="Pic"
-                  />
-                </Paper>
-              </div>
-
-              <div>
-                <Paper
-                  onClick={() => handleClick(1)}
-                  elevation={24}
-                  sx={{
-                    width: 278,
-                    height: 278,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    sx={{
-                      width: 150,
-                      height: 150,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    I like to cook meals at home
+                    It's so satisfying to realize a vision you have of a really
+                    nice meal, serving it to someone else and seeing their
+                    reaction. As with everything, the presentation of the meal
+                    is also very important to me.
                   </Typography>
                 </Paper>
               </div>
@@ -191,6 +203,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(2)}
+                  className="glass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -211,7 +224,9 @@ const About = () => {
                 <Paper
                   onClick={() => handleClick(2)}
                   elevation={24}
+                  className="glass"
                   sx={{
+                    py: 10,
                     width: 278,
                     height: 278,
                     display: "flex",
@@ -221,16 +236,19 @@ const About = () => {
                 >
                   <Typography
                     gutterBottom
-                    variant="h5"
+                    variant="body1"
                     sx={{
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 120,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    I like to code
+                    My favourite thing about coding is the creative freedom it
+                    combines with problem-solving. I get lost in the coding
+                    sometimes because there's so much to learn, and constantly
+                    improve upon.
                   </Typography>
                 </Paper>
               </div>
@@ -244,6 +262,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
+                  className="glass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -263,8 +282,10 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
+                  className="glass"
                   elevation={24}
                   sx={{
+                    py: 10,
                     width: 278,
                     height: 278,
                     display: "flex",
@@ -274,16 +295,19 @@ const About = () => {
                 >
                   <Typography
                     gutterBottom
-                    variant="h5"
+                    variant="body1"
                     sx={{
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 120,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    I like to work out
+                    It's nice to enjoy a bit of lifting in the gym. I love
+                    getting to listen to music, and resting my mind a bit.
+                    Funnily enough, it's where I get the most eureka moments for
+                    my programming problems.
                   </Typography>
                 </Paper>
               </div>
@@ -298,6 +322,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
+                  className="glass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -317,8 +342,10 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
+                  className="glass"
                   elevation={24}
                   sx={{
+                    py: 10,
                     width: 278,
                     height: 278,
                     display: "flex",
@@ -328,16 +355,18 @@ const About = () => {
                 >
                   <Typography
                     gutterBottom
-                    variant="h5"
+                    variant="body1"
                     sx={{
-                      width: 150,
-                      height: 150,
+                      width: 180,
+                      height: 120,
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
-                    I like to play with my cats
+                    I have 3 cats named Zelda, Shinji and Cinder. All are of
+                    course named after video game or anime characters because
+                    I'm a nerd. I'm very happy to show pictures of them!
                   </Typography>
                 </Paper>
               </div>
@@ -360,36 +389,3 @@ const About = () => {
 };
 
 export default About;
-
-/* const aboutData = [
-  {
-    id: 1,
-    src: "/images/guitar.png",
-    text: "I like to play guitar",
-    alt: "Guitar",
-  },
-  {
-    id: 2,
-    src: "/images/home-cooked-meal.png",
-    text: "I like to cook",
-    alt: "Cooking",
-  },
-  {
-    id: 3,
-    src: "/images/data.png",
-    text: "I like to code",
-    alt: "Coding",
-  },
-  {
-    id: 4,
-    src: "/images/gym.png",
-    text: "I like to work out",
-    alt: "Gym",
-  },
-  {
-    id: 5,
-    src: "/images/cat.png",
-    text: "I like to play with my cats",
-    alt: "Cat",
-  },
-]; */
