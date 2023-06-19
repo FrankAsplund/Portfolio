@@ -36,8 +36,8 @@ export default function Home() {
       </Head>
 
       <main className="bg-grad">
-        <Navbar />
         <Container>
+          <Navbar />
           <Infobox />
           <About />
           <Skills />

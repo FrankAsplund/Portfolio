@@ -17,7 +17,15 @@ export default function ButtonAppBar() {
   }, []);
   return (
     <main>
-      <AppBar position="static" className="glass">
+      <AppBar
+        position="static"
+        className="glass navbar"
+        sx={{
+          height: 100,
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
         <Toolbar>
           <Typography
             variant="h3"
@@ -33,6 +41,14 @@ export default function ButtonAppBar() {
           </Typography>
         </Toolbar>
       </AppBar>
+      <style jsx>{`
+        .navbar {
+          max-height: 100px;
+          min-width: 100%;
+          display: flex;
+          flex-direction: row;
+        }
+      `}</style>
     </main>
   );
 }

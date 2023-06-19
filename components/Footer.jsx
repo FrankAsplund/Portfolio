@@ -16,78 +16,92 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
+{
+  /* <Grid item spacing={4} p={2} m={2}>
+          <Link href="https://www.flaticon.com/free-icons/gym" underline="none">
+            Icons created by Freepik - Flaticon
+          </Link>
+        </Grid> */
+}
+
 const handleScrollTotop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function Footer() {
-  useEffect(() => {
+  /* useEffect(() => {
     AOS.init();
-  }, []);
+  }, []); */
   return (
     <main>
-      {/* <div className="footer"> */}
-      <AppBar
-        position="static"
-        className="glass footer"
-        sx={{
-          /* height: 100, */
-          /* display: "flex",
-            flexDirection: "row", */
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Grid item spacing={4} p={2} m={2}>
+      <footer className="glass footer">
+        <div className="footerItems">
           <Typography variant="h4" component="div">
             Frank Asplund
           </Typography>
-        </Grid>
-
-        <Grid item spacing={4} p={2} m={2}>
           <Typography
             variant="body1"
             sx={{
-              height: 30,
+              my: 2,
               px: 2,
+              display: "flex",
+              alignItems: "center",
             }}
             component="div"
           >
             This project was created in Visual Studio Code with React.js, and
             Next.js with Material UI components.
           </Typography>
-        </Grid>
 
-        {/* <Grid item spacing={4} p={2} m={2}>
-          <Link href="https://www.flaticon.com/free-icons/gym" underline="none">
-            Icons created by Freepik - Flaticon
-          </Link>
-        </Grid> */}
-
-        <Grid className="hoverShadow" item spacing={4} p={2} m={2}>
-          <Avatar
-            onClick={handleScrollTotop}
-            src="/images/up-arrow.png"
-            variant="rounded"
-            sx={{
-              width: 35,
-              height: 35,
-            }}
-          />
-        </Grid>
-      </AppBar>
-      {/* </div> */}
+          <div className="hover arrow" elevation={24}>
+            <Avatar
+              onClick={handleScrollTotop}
+              src="/images/up-arrow.png"
+              variant="rounded"
+              sx={{
+                width: 35,
+                height: 35,
+              }}
+            />
+          </div>
+        </div>
+      </footer>
       <style jsx>{`
         .footer {
-          max-height: 100px;
           display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          padding: 1rem;
+        }
+
+        .footerItems {
+          display: flex;
+          margin: 0.5rem 1rem 0.5rem 0.5rem;
+          align-items: center;
           flex-direction: row;
+        }
+
+        .arrow {
+          padding: 1rem;
+          border: 0.5px solid;
+          border-radius: 15%;
+          box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.05);
         }
 
         @media only screen and (max-width: 900px) {
           .footer {
-            max-height: auto;
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+          }
+
+          .footerItems {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
             flex-direction: column;
           }
         }
