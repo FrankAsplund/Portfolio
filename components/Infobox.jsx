@@ -36,22 +36,31 @@ export default function Infobox() {
         <Stack
           direction="column"
           sx={{
+            mr: 4,
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Avatar
+          <div
+            className="avatar-container"
             data-aos-delay="500"
             data-aos="fade-right"
             data-aos-duration="3000"
-            src="/images/pfp.jpg"
-            sx={{
-              width: 350,
-              height: 350,
-            }}
-            alt="Frank Asplund"
-          />
+          >
+            <div className="avatar glass hoverShadow">
+              <span>
+                <Avatar
+                  src="/images/pfp.jpg"
+                  sx={{
+                    width: 350,
+                    height: 350,
+                  }}
+                  alt="Frank Asplund"
+                />
+              </span>
+            </div>
+          </div>
 
           <Grid
             container
@@ -67,7 +76,7 @@ export default function Infobox() {
             data-aos="fade-right"
             data-aos-duration="3000"
           >
-            <Grid item spacing={4} px={2} mx={2}>
+            <Grid item spacing={4} px={2} mx={2} className="glass hoverShadow">
               <Link
                 href="https://www.linkedin.com/in/frank-asplund-794187221/"
                 underline="none"
@@ -82,7 +91,7 @@ export default function Infobox() {
               </Link>
             </Grid>
 
-            <Grid item spacing={4} px={2} mx={2}>
+            <Grid item spacing={4} px={2} mx={2} className="glass hoverShadow">
               <Link
                 href="https://github.com/FrankAsplund"
                 underline="none"
@@ -100,7 +109,7 @@ export default function Infobox() {
         </Stack>
 
         <Stack
-          className="glass"
+          className="glass hoverShadow"
           sx={{ p: 4, m: 4 }}
           useFlexGap
           flexWrap="wrap"
@@ -122,6 +131,55 @@ export default function Infobox() {
           </Typography>
         </Stack>
       </Stack>
+      <style jsx>
+        {`
+          .avatar-container {
+            animation: bobbing 3s infinite alternate;
+            width: 380px;
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          @keyframes bobbing {
+            0% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          .avatar-container .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .avatar span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              rgba(0, 0, 0, 0.741),
+              rgba(36, 58, 117, 0.769)
+            );
+            border-radius: 50%;
+            animation: circleRotate 5s linear infinite;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        `}
+      </style>
     </main>
   );
 }

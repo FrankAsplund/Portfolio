@@ -69,7 +69,7 @@ export default function Footer() {
       <style jsx>{`
         .footer {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           align-items: center;
           flex-wrap: wrap;
           padding: 1rem;
@@ -78,6 +78,7 @@ export default function Footer() {
         .footerItems {
           display: flex;
           margin: 0.5rem 1rem 0.5rem 0.5rem;
+          justify-content: center;
           align-items: center;
           flex-direction: row;
         }

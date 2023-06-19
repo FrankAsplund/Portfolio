@@ -75,65 +75,64 @@ const About = () => {
           justifyContent="center"
           alignItems="center"
         >
-          {/* <div className="hoverShadow"> */}
           <Grid item spacing={4} p={2} m={2}>
             <ReactCardFlip
               isFlipped={cardStates[0].isFlipped}
               flipDirection="horizontal"
             >
-              <Paper
-                onClick={() => handleClick(0)}
-                elevation={24}
-                className="glass"
-                sx={{
-                  p: 8,
-                  width: 278,
-                  height: 278,
-                }}
-              >
-                <Avatar
-                  variant="rounded"
-                  src="/images/guitar.png"
-                  sx={{ width: 150, height: 150 }}
-                  alt="Pic"
-                />
-              </Paper>
-              {/* </div> */}
-
-              {/* <div className="hoverShadow"> */}
-              <Paper
-                onClick={() => handleClick(0)}
-                className="glass"
-                elevation={24}
-                sx={{
-                  py: 10,
-                  width: 278,
-                  height: 278,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Typography
-                  gutterBottom
-                  variant="body1"
+              <div>
+                <Paper
+                  onClick={() => handleClick(0)}
+                  className="glass hoverShadow"
+                  elevation={24}
                   sx={{
-                    width: 180,
-                    height: 120,
+                    p: 8,
+                    width: 278,
+                    height: 278,
+                  }}
+                >
+                  <Avatar
+                    variant="rounded"
+                    src="/images/guitar.png"
+                    sx={{ width: 150, height: 150 }}
+                    alt="Guitar"
+                  />
+                </Paper>
+              </div>
+
+              <div>
+                <Paper
+                  onClick={() => handleClick(0)}
+                  className="glass hoverShadow"
+                  elevation={24}
+                  sx={{
+                    py: 10,
+                    width: 278,
+                    height: 278,
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                   }}
                 >
-                  I love playing my electric guitar. I'll either learn a song I
-                  really like, or come up with melodies on my own, and jamming
-                  along with my trusty loop pedal.
-                </Typography>
-              </Paper>
-              {/* </div> */}
+                  <Typography
+                    gutterBottom
+                    variant="body1"
+                    sx={{
+                      width: 180,
+                      height: 120,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    I love playing my electric guitar. I'll either learn a song
+                    I really like, or come up with melodies on my own, and
+                    jamming along with my trusty loop pedal.
+                  </Typography>
+                </Paper>
+              </div>
             </ReactCardFlip>
           </Grid>
-          {/* </div> */}
 
           <Grid item spacing={4} p={2} m={2}>
             <ReactCardFlip
@@ -143,7 +142,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(1)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -155,7 +154,7 @@ const About = () => {
                     variant="rounded"
                     src="/images/home-cooked-meal.png"
                     sx={{ width: 150, height: 150 }}
-                    alt="Pic"
+                    alt="Meal"
                   />
                 </Paper>
               </div>
@@ -163,7 +162,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(1)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -203,7 +202,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(2)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -215,7 +214,7 @@ const About = () => {
                     variant="rounded"
                     src="/images/data.png"
                     sx={{ width: 150, height: 150 }}
-                    alt="Pic"
+                    alt="Coding"
                   />
                 </Paper>
               </div>
@@ -224,7 +223,7 @@ const About = () => {
                 <Paper
                   onClick={() => handleClick(2)}
                   elevation={24}
-                  className="glass"
+                  className="glass hoverShadow"
                   sx={{
                     py: 10,
                     width: 278,
@@ -262,7 +261,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -274,7 +273,7 @@ const About = () => {
                     variant="rounded"
                     src="/images/gym.png"
                     sx={{ width: 150, height: 150 }}
-                    alt="Pic"
+                    alt="Gym"
                   />
                 </Paper>
               </div>
@@ -282,7 +281,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -322,7 +321,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -334,7 +333,7 @@ const About = () => {
                     variant="rounded"
                     src="/images/cat.png"
                     sx={{ width: 150, height: 150 }}
-                    alt="Pic"
+                    alt="Cat"
                   />
                 </Paper>
               </div>
@@ -342,7 +341,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
-                  className="glass"
+                  className="glass hoverShadow"
                   elevation={24}
                   sx={{
                     py: 10,
