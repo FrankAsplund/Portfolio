@@ -19,8 +19,6 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { useEffect } from "react";
 
-/* import Navbar from "../components/Navbar"; */
-
 export default function Infobox() {
   useEffect(() => {
     AOS.init();
@@ -37,15 +35,7 @@ export default function Infobox() {
           className="box"
           spacing={4}
         >
-          <Stack
-            className="avatar-box"
-            direction="column"
-            /* sx={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }} */
-          >
+          <Stack className="avatar-box">
             <div
               className="avatar-container"
               data-aos-delay="500"
@@ -55,11 +45,8 @@ export default function Infobox() {
               <div className="avatar glass hoverShadow">
                 <span>
                   <Avatar
+                    className="avatarImg"
                     src="/images/pfp.jpg"
-                    sx={{
-                      width: 350,
-                      height: 350,
-                    }}
                     alt="Frank Asplund"
                   />
                 </span>
@@ -126,17 +113,22 @@ export default function Infobox() {
 
           <Stack
             className="glass hoverShadow"
-            sx={{ p: 4, m: 4 }}
+            sx={{ py: 4, px: 6, m: 4 }}
             useFlexGap
             flexWrap="wrap"
             data-aos-delay="500"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-duration="4000"
           >
-            <Typography gutterBottom variant="h1" m={0}>
+            <Typography
+              gutterBottom
+              variant="h2"
+              m={0}
+              sx={{ fontWeight: 400 }}
+            >
               Frank Asplund
             </Typography>
-            <Typography gutterBottom variant="h3">
+            <Typography gutterBottom variant="h3" sx={{ fontWeight: 300 }}>
               Front-end developer
             </Typography>
             <Typography gutterBottom variant="h5">
@@ -194,6 +186,17 @@ export default function Infobox() {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+
+          @media only screen and (max-width: 900px) {
+            .avatar-container {
+              animation: bobbing 3s infinite alternate;
+              width: 310px;
+              height: 310px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
           }
         `}
       </style>

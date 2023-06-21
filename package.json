@@ -7,12 +7,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.2",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.4",
     "aos": "^3.0.0-beta.6",
+    "dotenv": "^16.3.1",
     "next": "latest",
     "react": "18.2.0",
     "react-card-flip": "^1.2.0",

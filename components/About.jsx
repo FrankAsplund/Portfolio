@@ -54,7 +54,6 @@ const About = () => {
       <Container
         sx={{
           display: "grid",
-          mb: "4rem",
           justifyItems: "center",
           flexWrap: "wrap",
         }}

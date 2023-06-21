@@ -17,7 +17,7 @@ export default function ButtonAppBar() {
     AOS.init();
   }, []);
   return (
-    <main>
+    <main id="navbar">
       <AppBar position="static" className="glass navbar">
         <Toolbar>
           <Typography
@@ -34,7 +34,7 @@ export default function ButtonAppBar() {
           <div className="navbarContainer">
             <div className="navbarItems">
               <Button
-                href="#infobox"
+                href="#navbar"
                 variant="text"
                 className="hover"
                 sx={{ px: 2, mx: 2 }}
@@ -64,7 +64,7 @@ export default function ButtonAppBar() {
       <style jsx>{`
         .navbar {
           height: 100;
-          padding: 0.5rem;
+
           max-height: 100px;
           min-width: 100%;
           display: flex;
@@ -94,13 +94,12 @@ export default function ButtonAppBar() {
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            padding: 1rem;
           }
 
           .navbarItems {
             display: flex;
             align-items: center;
-            padding: 1rem;
+            padding: 0.5rem;
             flex-direction: column;
           }
         }

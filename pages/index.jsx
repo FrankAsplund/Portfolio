@@ -12,6 +12,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Contact from "../components/Contact";
 import Arrow from "../components/Arrow";
 
 import "@fontsource/roboto/300.css";
@@ -41,6 +42,7 @@ export default function Home() {
           <Infobox />
           <About />
           <Skills />
+          <Contact />
         </Container>
         <Footer />
       </main>
@@ -81,11 +83,17 @@ export default function Home() {
           flex-direction: row;
         }
 
+        .avatarImg {
+          width: 350px;
+          height: 350px;
+        }
+
         .avatar-box {
           margin-right: 2rem;
-          display: "flex";
-          justifycontent: "center";
-          alignitems: "center";
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
         .glass {
@@ -121,10 +129,16 @@ export default function Home() {
           }
 
           .avatar-box {
-            margin-right: 0;
-            display: "flex";
-            justifycontent: "center";
-            alignitems: "center";
+            margin-right: 0px;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: "center";
+            align-items: center;
+          }
+
+          .avatarImg {
+            width: 280px;
+            height: 280px;
           }
         }
       `}</style>

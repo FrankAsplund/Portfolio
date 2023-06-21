@@ -32,8 +32,8 @@ export default function Skills() {
       <Container
         sx={{
           display: "grid",
-          mt: "6rem",
-          mb: "1rem",
+          /* mt: "6rem",
+          mb: "1rem", */
           justifyItems: "center",
           flexWrap: "wrap",
         }}
