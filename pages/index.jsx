@@ -54,10 +54,6 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
-
-        Container {
-          margin-top: 2rem;
-        }
       `}</style>
 
       <style jsx global>{`
@@ -83,6 +79,13 @@ export default function Home() {
         .box {
           display: flex;
           flex-direction: row;
+        }
+
+        .avatar-box {
+          margin-right: 2rem;
+          display: "flex";
+          justifycontent: "center";
+          alignitems: "center";
         }
 
         .glass {
@@ -115,6 +118,13 @@ export default function Home() {
           .box {
             display: flex;
             flex-direction: column;
+          }
+
+          .avatar-box {
+            margin-right: 0;
+            display: "flex";
+            justifycontent: "center";
+            alignitems: "center";
           }
         }
       `}</style>

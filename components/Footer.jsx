@@ -53,9 +53,12 @@ export default function Footer() {
             Next.js with Material UI components.
           </Typography>
 
-          <div className="hover arrow" elevation={24}>
+          <div
+            className="hover arrow"
+            elevation={24}
+            onClick={handleScrollTotop}
+          >
             <Avatar
-              onClick={handleScrollTotop}
               src="/images/up-arrow.png"
               variant="rounded"
               sx={{

@@ -23,6 +23,7 @@ export default function Skills() {
   }, []);
   return (
     <main
+      id="skills"
       className="container-box"
       data-aos-delay="100"
       data-aos="fade-up"
@@ -40,7 +41,15 @@ export default function Skills() {
         <Typography gutterBottom variant="h3">
           My skills
         </Typography>
-        <Typography gutterBottom variant="h5">
+        <Typography
+          gutterBottom
+          variant="h5"
+          sx={{
+            display: "grid",
+            justifyContent: "center",
+            justifyItems: "center",
+          }}
+        >
           These are the technologies, frameworks, and languages I have
           experience in.
         </Typography>

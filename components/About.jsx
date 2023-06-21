@@ -46,6 +46,7 @@ const About = () => {
 
   return (
     <main
+      id="about"
       className="container-box"
       data-aos="zoom-in-up"
       data-aos-duration="4000"
@@ -53,7 +54,6 @@ const About = () => {
       <Container
         sx={{
           display: "grid",
-          mt: "6rem",
           mb: "4rem",
           justifyItems: "center",
           flexWrap: "wrap",
