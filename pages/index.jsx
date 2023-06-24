@@ -122,6 +122,17 @@ export default function Home() {
           box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
         }
 
+        .multiline {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .contact {
+          width: 100% !important;
+        }
+
         @media only screen and (max-width: 900px) {
           .box {
             display: flex;

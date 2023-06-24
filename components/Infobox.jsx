@@ -25,7 +25,6 @@ export default function Infobox() {
   }, []);
   return (
     <div>
-      {/* <Navbar /> */}
       <main className="container-box" id="infobox">
         <Stack
           sx={{
@@ -46,7 +45,7 @@ export default function Infobox() {
                 <span>
                   <Avatar
                     className="avatarImg"
-                    src="/images/pfp.jpg"
+                    src="/images/pfp2.jpg"
                     alt="Frank Asplund"
                   />
                 </span>
@@ -112,7 +111,6 @@ export default function Infobox() {
           </Stack>
 
           <Stack
-            className="glass hoverShadow"
             sx={{ py: 4, px: 6, m: 4 }}
             useFlexGap
             flexWrap="wrap"
