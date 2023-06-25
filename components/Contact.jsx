@@ -46,7 +46,7 @@ export default function Contact() {
   }, []);
   return (
     <div>
-      <main className="container-box" id="contact">
+      <main data-aos="flip-left" className="container-box" id="contact">
         <Container
           sx={{
             display: "grid",
@@ -64,7 +64,7 @@ export default function Contact() {
             form to make sure it works. I'll make sure to respond as soon as
             possible!
           </Typography>
-          <Grid
+          {/* <Grid
             container
             rowSpacing={1}
             spacing={0}
@@ -72,8 +72,8 @@ export default function Contact() {
             columns={2}
             justifyContent="center"
             alignItems="center"
-          >
-            <Paper
+          > */}
+          {/* <Paper
               className="glass"
               elevation={24}
               sx={{
@@ -83,77 +83,77 @@ export default function Contact() {
                 justifyContent: "center",
                 alignItems: "center",
               }}
+            > */}
+          <form ref={form} className="contact glass" onSubmit={sendEmail}>
+            <Grid item spacing={4} px={0} mx={2}>
+              <TextField
+                sx={{
+                  mx: 2,
+                  my: 2,
+                }}
+                type="text"
+                name="user_name"
+                label="Full Name"
+                variant="outlined"
+              />
+              <TextField
+                sx={{
+                  mx: 2,
+                  my: 2,
+                }}
+                type="text"
+                name="user_email"
+                label="Email"
+                variant="outlined"
+              />
+            </Grid>
+
+            <Grid item spacing={4} px={0} mx={2}>
+              <TextField
+                sx={{
+                  mx: 2,
+                  my: 2,
+                }}
+                type="text"
+                name="user_subject"
+                label="Subject"
+                variant="outlined"
+              />
+            </Grid>
+
+            <Grid item spacing={4} px={2} mx={2}>
+              <TextField
+                className="multiline"
+                label="Message"
+                name="message"
+                multiline
+                rows={8}
+              />
+            </Grid>
+            <Grid
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+              }}
+              item
+              spacing={4}
+              px={2}
+              m={2}
             >
-              <form ref={form} className="contact" onSubmit={sendEmail}>
-                <Grid item spacing={4} px={0} mx={2}>
-                  <TextField
-                    sx={{
-                      mx: 2,
-                      my: 2,
-                    }}
-                    type="text"
-                    name="user_name"
-                    label="Full Name"
-                    variant="outlined"
-                  />
-                  <TextField
-                    sx={{
-                      mx: 2,
-                      my: 2,
-                    }}
-                    type="text"
-                    name="user_email"
-                    label="Email"
-                    variant="outlined"
-                  />
-                </Grid>
-
-                <Grid item spacing={4} px={0} mx={2}>
-                  <TextField
-                    sx={{
-                      mx: 2,
-                      my: 2,
-                    }}
-                    type="text"
-                    name="user_subject"
-                    label="Subject"
-                    variant="outlined"
-                  />
-                </Grid>
-
-                <Grid item spacing={4} px={2} mx={2}>
-                  <TextField
-                    className="multiline"
-                    label="Message"
-                    name="message"
-                    multiline
-                    rows={8}
-                  />
-                </Grid>
-                <Grid
-                  sx={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "flex-end",
-                  }}
-                  item
-                  spacing={4}
-                  px={2}
-                  m={2}
-                >
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    value="Send"
-                    size="large"
-                    endIcon={<SendIcon />}
-                  >
-                    Send
-                  </Button>
-                </Grid>
-              </form>
-            </Paper>
-          </Grid>
+              <Button
+                type="submit"
+                variant="contained"
+                value="Send"
+                size="large"
+                endIcon={<SendIcon />}
+              >
+                Send
+              </Button>
+            </Grid>
+          </form>
+          {/* </Paper> */}
+          {/* </Grid> */}
         </Container>
         <style jsx>
           {`

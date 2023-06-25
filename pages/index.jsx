@@ -12,8 +12,9 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import Work from "../components/Work";
+
 import Contact from "../components/Contact";
-import Arrow from "../components/Arrow";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -21,12 +22,6 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import Container from "@mui/material/Container";
-/* import Paper from "@mui/material/Paper";
-import Avatar from "@mui/material/Avatar";
-import Stack from "@mui/material/Stack";
-import Grid from "@mui/material/Unstable_Grid2";
-import Box from "@mui/material/Box";
-import { Typography } from "@mui/material"; */
 
 export default function Home() {
   return (
@@ -42,6 +37,8 @@ export default function Home() {
           <Infobox />
           <About />
           <Skills />
+          <Work />
+
           <Contact />
         </Container>
         <Footer />
@@ -130,7 +127,8 @@ export default function Home() {
         }
 
         .contact {
-          width: 100% !important;
+          width: 80% !important;
+          margin-top: 2rem;
         }
 
         @media only screen and (max-width: 900px) {
