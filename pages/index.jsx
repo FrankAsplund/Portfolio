@@ -64,9 +64,16 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        .bg-grad {
+        /* .bg-grad {
           background-image: linear-gradient(
             rgba(0, 0, 0, 0.741),
+            rgba(36, 58, 117, 0.769)
+          );
+        } */
+
+        .bg-grad {
+          background-image: linear-gradient(
+            rgba(15, 24, 46, 0.769),
             rgba(36, 58, 117, 0.769)
           );
         }
@@ -126,9 +133,51 @@ export default function Home() {
           width: 100%;
         }
 
+        .tab-panel Container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+          justify-items: center;
+          margin-top: 2rem;
+        }
+
         .contact {
           width: 80% !important;
           margin-top: 2rem;
+        }
+
+        .box-container {
+          width: 100%;
+          padding: 1rem;
+
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+
+        .box-container * {
+          padding: 0.5rem;
+        }
+
+        .tab-box1 {
+          display: flex;
+          flex-wrap: wrap;
+
+          border-bottom: 1px solid;
+          border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .css-heg063-MuiTabs-flexContainer {
+          display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center !important;
+          flex-direction: row !important;
+        }
+
+        .css-3sx0hq-MuiTabs-indicator {
+          padding: 0rem !important;
         }
 
         @media only screen and (max-width: 900px) {
@@ -141,13 +190,30 @@ export default function Home() {
             margin-right: 0px;
             display: flex !important;
             flex-direction: column;
-            justify-content: "center";
+            justify-content: center;
             align-items: center;
           }
 
           .avatarImg {
             width: 280px;
             height: 280px;
+          }
+
+          .tab-panel Container {
+            height: auto;
+            width: auto;
+            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+          }
+
+          .css-heg063-MuiTabs-flexContainer {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-content: center !important;
+            align-items: center !important ;
+            flex-direction: column !important;
           }
         }
       `}</style>

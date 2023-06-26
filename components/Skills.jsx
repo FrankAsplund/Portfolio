@@ -6,11 +6,11 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import Container from "@mui/material/Container";
-import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Unstable_Grid2";
+import Paper from "@mui/material/Paper";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
 
 import AOS from "aos";
@@ -32,8 +32,6 @@ export default function Skills() {
       <Container
         sx={{
           display: "grid",
-          /* mt: "6rem",
-          mb: "1rem", */
           justifyItems: "center",
           flexWrap: "wrap",
         }}

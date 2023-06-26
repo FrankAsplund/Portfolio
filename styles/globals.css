@@ -37,6 +37,13 @@ button {
   font-weight: bold;
 }
 
+/* .bg-grad {
+  background-image: linear-gradient(
+    rgba(15, 24, 46, 0.769),
+    rgba(36, 58, 117, 0.769)
+  );
+}
+ */
 /* .avatar span {
   position: absolute;
   width: 100%;

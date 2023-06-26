@@ -51,6 +51,15 @@ export default function ButtonAppBar() {
                   Skills
                 </Button>
                 <Button
+                  href="#experience"
+                  variant="text"
+                  className="hover"
+                  sx={{ px: 2, mx: 2 }}
+                  size="large"
+                >
+                  Experience
+                </Button>
+                <Button
                   href="#contact"
                   variant="text"
                   className="hover"
@@ -58,6 +67,20 @@ export default function ButtonAppBar() {
                   size="large"
                 >
                   Contact
+                </Button>
+                <Button
+                  variant="text"
+                  className="glass hover"
+                  sx={{ px: 2, mx: 2 }}
+                  size="large"
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/FrankAsplund/my-cv/raw/3fe04fb525d12dc42fb8608e13fb0e8de0475099/CV-FrankAsplund%202023.pdf",
+                      "_blank"
+                    )
+                  }
+                >
+                  Download Resume
                 </Button>
               </div>
             </div>

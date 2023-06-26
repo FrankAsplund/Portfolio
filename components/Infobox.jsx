@@ -131,9 +131,9 @@ export default function Infobox() {
             </Typography>
             <Typography gutterBottom variant="h5">
               Dedicated and determined to deliver responsive, functional
-              websites on time. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Obcaecati nobis quibusdam quia ad ipsa explicabo
-              perspiciatis at, accusantium molestias omnis.
+              websites on time, while ensuring a seamless user experience.
+              Proficient in HTML, CSS, and JavaScript, with a focus on modern
+              front-end frameworks such as React and Vue.js.
             </Typography>
           </Stack>
         </Stack>
