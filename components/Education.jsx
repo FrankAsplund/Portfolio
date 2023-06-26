@@ -1,4 +1,4 @@
-import Container from "@mui/material/Container";
+/* import Container from "@mui/material/Container";
 import * as React from "react";
 import PropTypes from "prop-types";
 import Tabs from "@mui/material/Tabs";
@@ -135,3 +135,4 @@ export default function Education() {
     </main>
   );
 }
+ */
