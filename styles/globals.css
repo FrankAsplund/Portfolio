@@ -37,6 +37,10 @@ button {
   font-weight: bold;
 }
 
+span {
+  color: linear-gradient(rgb(74, 107, 137), rgba(35, 70, 167, 0.769));
+}
+
 /* .bg-grad {
   background-image: linear-gradient(
     rgba(140, 159, 208, 0.769),

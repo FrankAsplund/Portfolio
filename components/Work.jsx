@@ -65,14 +65,14 @@ export default function Work() {
             mb: "3rem",
           }}
           className="tab-box"
-          spacing={4}
         >
           <TabContext value={value}>
-            <div className="tab-panel glass">
+            <Stack className="tablist-stack">
               <TabList
                 onChange={handleChange}
                 aria-label="lab API tabs example"
                 orientation="vertical"
+                className="tab-panel"
               >
                 <Tab label="Onify" value="1" />
                 <Tab label="KYH" value="2" />
@@ -80,7 +80,7 @@ export default function Work() {
                 <Tab label="Försvarsmakten" value="4" />
                 <Tab label="Rudbeck gymnasium" value="5" />
               </TabList>
-            </div>
+            </Stack>
 
             <div className="tab-container">
               <TabPanel value="1">
@@ -104,7 +104,6 @@ export default function Work() {
                 </Container>
               </TabPanel>
               <TabPanel value="2">
-                {" "}
                 <Container
                   sx={{
                     display: "grid",
@@ -184,25 +183,6 @@ export default function Work() {
       </div>
       <style jsx>
         {`
-          /* .css-heg063-MuiTabs-flexContainer {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            align-content: center !important;
-            align-items: center !important;
-            flex-direction: row !important;
-          } */
-
-          /* .tab-panel Container {
-            width: auto;
-            height: auto;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            justify-items: center;
-            margin-top: 2rem;
-          } */
-
           @media only screen and (max-width: 600px) {
             /* .tab-panel Container {
               height: auto;

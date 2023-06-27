@@ -5,6 +5,7 @@ import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+/* import text from "../styles/text.module.css"; */
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -127,13 +128,16 @@ export default function Infobox() {
               Frank Asplund
             </Typography>
             <Typography gutterBottom variant="h3" sx={{ fontWeight: 300 }}>
-              Front-end developer
+              <span className="text">Front-end developer</span>
             </Typography>
             <Typography gutterBottom variant="h5">
               Dedicated and determined to deliver responsive, functional
               websites on time, while ensuring a seamless user experience.
               Proficient in HTML, CSS, and JavaScript, with a focus on modern
-              front-end frameworks such as React and Vue.js.
+              front-end frameworks such as
+              <span style={{ color: "#00d8ff" }}> React </span>
+              and
+              <span style={{ color: "#42b883" }}> Vue.js</span>.
             </Typography>
           </Stack>
         </Stack>
@@ -175,8 +179,8 @@ export default function Infobox() {
             width: 100%;
             height: 100%;
             background: linear-gradient(
-              rgba(0, 0, 0, 0.741),
-              rgba(36, 58, 117, 0.769)
+              rgb(74, 107, 137),
+              rgba(35, 70, 167, 0.769)
             );
             border-radius: 50%;
             animation: circleRotate 5s linear infinite;
@@ -184,6 +188,23 @@ export default function Infobox() {
             display: flex;
             justify-content: center;
             align-items: center;
+          }
+
+          @keyframes glowing {
+            0% {
+              text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
+            }
+            50% {
+              text-shadow: none;
+            }
+            100% {
+              text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
+            }
+          }
+
+          .text {
+            animation: glowing 5s infinite;
+            color: #90caf9;
           }
 
           @media only screen and (max-width: 900px) {

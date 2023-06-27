@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar";
 import Infobox from "../components/Infobox";
 import About from "../components/About";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+/* import Projects from "../components/Projects"; */
 import Footer from "../components/Footer";
 import Work from "../components/Work";
 
@@ -94,6 +94,15 @@ export default function Home() {
           align-items: center;
         }
 
+        .tablist-stack {
+          width: 300px;
+          margin-right: 2rem;
+          display: flex !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
         .glass {
           /* From https://css.glass */
           background: rgba(255, 255, 255, 0.07);
@@ -115,6 +124,17 @@ export default function Home() {
           transition: transform 0.15s;
         }
 
+        /* .text {
+          background: linear-gradient(
+            rgb(164, 183, 202),
+            rgba(129, 146, 192, 0.769)
+          );
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        } */
+
+        /* Vit? */
         /* .hoverShadow:hover {
           transform: scale(1.03);
           box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
@@ -132,14 +152,6 @@ export default function Home() {
           width: 100%;
         }
 
-        /* .tab-panel Container {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1rem;
-          justify-items: center;
-          margin-top: 2rem;
-        } */
-
         .contact {
           width: 80% !important;
           margin-top: 2rem;
@@ -148,22 +160,15 @@ export default function Home() {
         .box-container {
           width: 100%;
           padding: 1rem;
-
           display: flex;
           flex-wrap: wrap;
           flex-direction: column;
         }
 
-        /* .tab-container * {
-          display: flex !important;
-          flex-wrap: wrap !important;
-          justify-content: center !important;
-          align-content: center !important;
-          align-items: center !important;
-        } */
-
         .tab-container {
-          display: grid !important;
+          max-width: 700px;
+          margin: 0 !important;
+          display: flex !important;
           flex-wrap: wrap !important;
           justify-content: center !important;
           align-content: center !important;
@@ -174,15 +179,8 @@ export default function Home() {
           display: flex;
           align-items: stretch;
           flex-direction: row;
+          justify-content: center;
         }
-
-        /* .tab-box1 {
-          display: flex;
-          flex-wrap: wrap;
-
-          border-bottom: 1px solid;
-          border-color: rgba(255, 255, 255, 0.12);
-        } */
 
         @media only screen and (max-width: 900px) {
           .box {
@@ -210,7 +208,6 @@ export default function Home() {
           }
 
           .tab-panel {
-            width: 300px !important;
             display: flex !important;
             flex-wrap: wrap !important;
             justify-content: center !important;

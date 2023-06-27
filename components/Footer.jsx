@@ -105,7 +105,7 @@ export default function Footer() {
           .footerItems {
             display: flex;
             align-items: center;
-            padding: 1rem;
+
             flex-direction: column;
           }
         }
