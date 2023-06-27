@@ -9,10 +9,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-/* import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"; */
 import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 
 export default function Work() {
   const [value, setValue] = React.useState("1");
@@ -59,13 +59,20 @@ export default function Work() {
           </Typography>
         </Container>
 
-        <Box sx={{ typography: "body1" }}>
+        <Stack
+          sx={{
+            mt: "6rem",
+            mb: "8rem",
+          }}
+          className="box"
+          spacing={4}
+        >
           <TabContext value={value}>
             <div className="tab-panel">
               <TabList
                 onChange={handleChange}
                 aria-label="lab API tabs example"
-                /* variant="fullWidth" */
+                orientation="vertical"
               >
                 <Tab label="Onify" value="1" />
                 <Tab label="KYH" value="2" />
@@ -173,21 +180,20 @@ export default function Work() {
               </TabPanel>
             </div>
           </TabContext>
-        </Box>
-        {/* </Container> */}
+        </Stack>
       </div>
       <style jsx>
         {`
-          .css-heg063-MuiTabs-flexContainer {
+          /* .css-heg063-MuiTabs-flexContainer {
             display: flex !important;
             flex-wrap: wrap !important;
             justify-content: center !important;
             align-content: center !important;
             align-items: center !important;
             flex-direction: row !important;
-          }
+          } */
 
-          .tab-panel Container {
+          /* .tab-panel Container {
             width: auto;
             height: auto;
             display: grid;
@@ -195,16 +201,16 @@ export default function Work() {
             gap: 1rem;
             justify-items: center;
             margin-top: 2rem;
-          }
+          } */
 
           @media only screen and (max-width: 600px) {
-            .tab-panel Container {
+            /* .tab-panel Container {
               height: auto;
               width: auto;
               grid-template-columns: 1fr;
               display: flex;
               flex-direction: column;
-            }
+            } */
 
             .css-heg063-MuiTabs-flexContainer {
               display: flex !important;

@@ -39,11 +39,16 @@ button {
 
 /* .bg-grad {
   background-image: linear-gradient(
-    rgba(15, 24, 46, 0.769),
-    rgba(36, 58, 117, 0.769)
+    rgba(140, 159, 208, 0.769),
+    rgba(59, 87, 162, 0.769)
   );
-}
- */
+} */
+
+/* .hoverShadow:hover {
+          transform: scale(1.03);
+          box-shadow: 0 0 1rem rgba(80, 106, 176, 0.769);
+        } */
+
 /* .avatar span {
   position: absolute;
   width: 100%;
