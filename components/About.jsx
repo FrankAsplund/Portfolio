@@ -92,7 +92,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/guitar.png"
+                    src="/images/guitarglow.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Guitar"
                   />
@@ -151,7 +151,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/home-cooked-meal.png"
+                    src="/images/cookglow.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Meal"
                   />
@@ -211,7 +211,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/data.png"
+                    src="/images/dataglow.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Coding"
                   />
@@ -270,7 +270,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/gym.png"
+                    src="/images/gymglow.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Gym"
                   />
@@ -330,7 +330,7 @@ const About = () => {
                 >
                   <Avatar
                     variant="rounded"
-                    src="/images/cat.png"
+                    src="/images/catglow.png"
                     sx={{ width: 150, height: 150 }}
                     alt="Cat"
                   />

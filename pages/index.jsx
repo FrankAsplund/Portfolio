@@ -64,14 +64,6 @@ export default function Home() {
           box-sizing: border-box;
         }
 
-        /* GAMLA
-        .bg-grad {
-          background-image: linear-gradient(
-            rgba(15, 24, 46, 0.769),
-            rgba(36, 58, 117, 0.769)
-          );
-        } */
-
         /* NYA */
         .bg-grad {
           background-image: linear-gradient(
@@ -79,14 +71,6 @@ export default function Home() {
             rgba(21, 33, 66, 0.769)
           );
         }
-
-        /* ljus */
-        /* .bg-grad {
-          background-image: linear-gradient(
-            rgba(140, 159, 208, 0.769),
-            rgba(59, 87, 162, 0.769)
-          );
-        } */
 
         .container-box {
           min-height: 100vh;
@@ -117,16 +101,6 @@ export default function Home() {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
           border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* From https://css.glass */
-        .card-glass {
-          background: rgba(216, 216, 216, 0.37);
-          border-radius: 16px;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(216, 216, 216, 0.31);
         }
 
         .hover {
@@ -180,39 +154,45 @@ export default function Home() {
           flex-direction: column;
         }
 
-        .tab-container * {
-          padding: 0.5rem;
+        /* .tab-container * {
           display: flex !important;
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          align-content: center !important;
+          align-items: center !important;
+        } */
+
+        .tab-container {
+          display: grid !important;
           flex-wrap: wrap !important;
           justify-content: center !important;
           align-content: center !important;
           align-items: center !important;
         }
 
-        .tab-box1 {
+        .tab-box {
+          display: flex;
+          align-items: stretch;
+          flex-direction: row;
+        }
+
+        /* .tab-box1 {
           display: flex;
           flex-wrap: wrap;
 
           border-bottom: 1px solid;
           border-color: rgba(255, 255, 255, 0.12);
-        }
-
-        /* .css-heg063-MuiTabs-flexContainer {
-          display: flex !important;
-          flex-wrap: wrap !important;
-          justify-content: center !important;
-          align-content: center !important;
-          align-items: center !important;
-          flex-direction: row !important;
-        } */
-
-        /* .css-3sx0hq-MuiTabs-indicator {
-          padding: 0rem !important;
         } */
 
         @media only screen and (max-width: 900px) {
           .box {
             display: flex;
+            flex-direction: column;
+          }
+
+          .tab-box {
+            display: flex;
+            align-items: center;
             flex-direction: column;
           }
 
@@ -227,6 +207,22 @@ export default function Home() {
           .avatarImg {
             width: 280px;
             height: 280px;
+          }
+
+          .tab-panel {
+            width: 300px !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-content: center !important;
+            align-items: center !important ;
+            flex-direction: column !important;
+          }
+
+          .contact {
+            width: 100% !important;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
           }
 
           /* .tab-panel Container {

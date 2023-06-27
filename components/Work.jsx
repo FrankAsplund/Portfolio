@@ -61,14 +61,14 @@ export default function Work() {
 
         <Stack
           sx={{
-            mt: "6rem",
-            mb: "8rem",
+            mt: "3rem",
+            mb: "3rem",
           }}
-          className="box"
+          className="tab-box"
           spacing={4}
         >
           <TabContext value={value}>
-            <div className="tab-panel">
+            <div className="tab-panel glass">
               <TabList
                 onChange={handleChange}
                 aria-label="lab API tabs example"

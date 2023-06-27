@@ -64,27 +64,19 @@ export default function Contact() {
             form to make sure it works. I'll make sure to respond as soon as
             possible!
           </Typography>
-          {/* <Grid
-            container
-            rowSpacing={1}
-            spacing={0}
-            minHeight={160}
-            columns={2}
-            justifyContent="center"
-            alignItems="center"
-          > */}
-          {/* <Paper
-              className="glass"
-              elevation={24}
-              sx={{
-                my: 4,
-                mx: 2,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            > */}
           <form ref={form} className="contact glass" onSubmit={sendEmail}>
+            <Typography
+              gutterBottom
+              variant="h4"
+              sx={{
+                my: 2,
+                display: "grid",
+                justifyItems: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              Contact me!
+            </Typography>
             <Grid item spacing={4} px={0} mx={2}>
               <TextField
                 sx={{
@@ -148,12 +140,10 @@ export default function Contact() {
                 size="large"
                 endIcon={<SendIcon />}
               >
-                Send
+                Send me an email
               </Button>
             </Grid>
           </form>
-          {/* </Paper> */}
-          {/* </Grid> */}
         </Container>
         <style jsx>
           {`
