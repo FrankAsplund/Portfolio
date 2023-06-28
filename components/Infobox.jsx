@@ -1,11 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+import NextLink from "next/link";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-/* import text from "../styles/text.module.css"; */
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
@@ -17,8 +16,41 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Unstable_Grid2";
 import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+
 import { Typography } from "@mui/material";
 import { useEffect } from "react";
+
+import { Link as ScrollLink } from "react-scroll";
+
+function smoothScroll(target) {
+  const element = document.querySelector(target);
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: "smooth",
+    });
+  }
+}
+
+const SmoothScrollButton = ({ href, children }) => {
+  const handleClick = () => {
+    smoothScroll(href);
+  };
+
+  return (
+    <ScrollLink
+      to={href}
+      smooth={true}
+      spy={true}
+      offset={-70} // Adjust the offset value based on your layout
+      duration={500} // Adjust the duration as desired
+      onClick={handleClick}
+    >
+      <Button>{children}</Button>
+    </ScrollLink>
+  );
+};
 
 export default function Infobox() {
   useEffect(() => {
@@ -74,7 +106,7 @@ export default function Infobox() {
                 mx={2}
                 className="glass hoverShadow"
               >
-                <Link
+                <NextLink
                   href="https://www.linkedin.com/in/frank-asplund-794187221/"
                   underline="none"
                   mx={2}
@@ -85,7 +117,7 @@ export default function Infobox() {
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
                     alt="LinkedIn"
                   />
-                </Link>
+                </NextLink>
               </Grid>
 
               <Grid
@@ -95,7 +127,7 @@ export default function Infobox() {
                 mx={2}
                 className="glass hoverShadow"
               >
-                <Link
+                <NextLink
                   href="https://github.com/FrankAsplund"
                   underline="none"
                   mx={2}
@@ -106,7 +138,7 @@ export default function Infobox() {
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                     alt="Github"
                   />
-                </Link>
+                </NextLink>
               </Grid>
             </Grid>
           </Stack>
@@ -166,7 +198,7 @@ export default function Infobox() {
               }}
             >
               <div className="down-arrow hover">
-                <span className="arrow-png" href="#about">
+                <SmoothScrollButton className="arrow-png" href="#about">
                   <Avatar
                     className="hover"
                     variant="rounded"
@@ -180,7 +212,7 @@ export default function Infobox() {
                     }}
                     alt="Arrow pointing down"
                   />
-                </span>
+                </SmoothScrollButton>
               </div>
             </Container>
           </Stack>
