@@ -133,12 +133,56 @@ export default function Infobox() {
             <Typography gutterBottom variant="h5">
               Dedicated and determined to deliver responsive, functional
               websites on time, while ensuring a seamless user experience.
-              Proficient in HTML, CSS, and JavaScript, with a focus on modern
-              front-end frameworks such as
+              Proficient in
+              <span style={{ color: "#ff8c00" }}> HTML</span>,
+              <span style={{ color: "#00d8ff" }}> CSS</span>, and
+              <span style={{ color: "#ffee00" }}> JavaScript</span>, with a
+              focus on modern front-end frameworks such as
               <span style={{ color: "#00d8ff" }}> React </span>
               and
               <span style={{ color: "#42b883" }}> Vue.js</span>.
             </Typography>
+
+            <Typography
+              gutterBottom
+              variant="h4"
+              sx={{
+                fontWeight: 400,
+                mt: 4,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span className="text">
+                Keep scrolling if you want to know more about me!{" "}
+              </span>
+            </Typography>
+            <Container
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div className="down-arrow hover">
+                <span className="arrow-png" href="#about">
+                  <Avatar
+                    className="hover"
+                    variant="rounded"
+                    src="/images/down-chevron.png"
+                    sx={{
+                      width: 45,
+                      height: 45,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    alt="Arrow pointing down"
+                  />
+                </span>
+              </div>
+            </Container>
           </Stack>
         </Stack>
       </main>
@@ -162,6 +206,32 @@ export default function Infobox() {
             }
             100% {
               transform: translateY(0);
+            }
+          }
+
+          .down-arrow {
+            animation: bobbing 3s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .arrow-png {
+            color: black; /* Initial color of the arrow */
+            filter: drop-shadow(0 0 5px #90caf9); /* Simulated glowing effect */
+            animation: glowing 1.5s infinite alternate; /* Animation for the glowing effect */
+          }
+
+          @keyframes glowing {
+            0% {
+              filter: drop-shadow(
+                0 0 5px #90caf9
+              ); /* Start with the glowing effect */
+            }
+            100% {
+              filter: drop-shadow(
+                0 0 15px #90caf9
+              ); /* End with a stronger glowing effect */
             }
           }
 

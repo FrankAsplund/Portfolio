@@ -8,11 +8,49 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Stack from "@mui/material/Stack";
 
+import { Link } from "react-scroll";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-export default function ButtonAppBar() {
+function smoothScroll(target) {
+  const element = document.querySelector(target);
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop,
+      behavior: "smooth",
+    });
+  }
+}
+
+const SmoothScrollButton = ({ href, children }) => {
+  const handleClick = () => {
+    smoothScroll(href);
+  };
+
+  return (
+    <Link
+      to={href}
+      smooth={true}
+      spy={true}
+      offset={-70} // Adjust the offset value based on your layout
+      duration={500} // Adjust the duration as desired
+      onClick={handleClick}
+    >
+      <Button
+        variant="text"
+        className="hover"
+        sx={{ px: 2, mx: 2 }}
+        size="large"
+      >
+        {children}
+      </Button>
+    </Link>
+  );
+};
+
+const Navbar = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -23,51 +61,13 @@ export default function ButtonAppBar() {
           <Toolbar>
             <div className="navbarContainer">
               <div className="navbarItems">
-                <Button
-                  href="#navbar"
-                  variant="text"
-                  className="hover"
-                  sx={{ px: 2, mx: 2 }}
-                  size="large"
-                >
-                  Home
-                </Button>
-                <Button
-                  href="#about"
-                  variant="text"
-                  className="hover"
-                  sx={{ px: 2, mx: 2 }}
-                  size="large"
-                >
-                  About Me
-                </Button>
-                <Button
-                  href="#skills"
-                  variant="text"
-                  className="hover"
-                  sx={{ px: 2, mx: 2 }}
-                  size="large"
-                >
-                  Skills
-                </Button>
-                <Button
-                  href="#experience"
-                  variant="text"
-                  className="hover"
-                  sx={{ px: 2, mx: 2 }}
-                  size="large"
-                >
+                <SmoothScrollButton href="#navbar">Home</SmoothScrollButton>
+                <SmoothScrollButton href="#about">About Me</SmoothScrollButton>
+                <SmoothScrollButton href="#skills">Skills</SmoothScrollButton>
+                <SmoothScrollButton href="#experience">
                   Experience
-                </Button>
-                <Button
-                  href="#contact"
-                  variant="text"
-                  className="hover"
-                  sx={{ px: 2, mx: 2 }}
-                  size="large"
-                >
-                  Contact
-                </Button>
+                </SmoothScrollButton>
+                <SmoothScrollButton href="#contact">Contact</SmoothScrollButton>
                 <Button
                   variant="text"
                   className="glass hover"
@@ -133,4 +133,6 @@ export default function ButtonAppBar() {
       </main>
     </div>
   );
-}
+};
+
+export default Navbar;
