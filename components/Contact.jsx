@@ -54,7 +54,13 @@ export default function Contact() {
             flexWrap: "wrap",
           }}
         >
-          <Typography gutterBottom variant="h3">
+          <Typography
+            gutterBottom
+            variant="h3"
+            sx={{
+              mt: 2,
+            }}
+          >
             I'd love to get to know you.
           </Typography>
           <Typography gutterBottom variant="body1">

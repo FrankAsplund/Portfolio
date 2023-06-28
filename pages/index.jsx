@@ -167,6 +167,7 @@ export default function Home() {
 
         .tab-container {
           max-width: 700px;
+          min-width: 700px;
           margin: 0 !important;
           display: flex !important;
           flex-wrap: wrap !important;
@@ -175,11 +176,32 @@ export default function Home() {
           align-items: center !important;
         }
 
+        .tab-padding * {
+          padding: 5px !important;
+        }
+
         .tab-box {
           display: flex;
           align-items: stretch;
           flex-direction: row;
           justify-content: center;
+        }
+
+        @keyframes glowing {
+          0% {
+            text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
+          }
+          50% {
+            text-shadow: none;
+          }
+          100% {
+            text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
+          }
+        }
+
+        .text {
+          animation: glowing 10s infinite;
+          color: #90caf9;
         }
 
         @media only screen and (max-width: 900px) {
@@ -205,6 +227,17 @@ export default function Home() {
           .avatarImg {
             width: 280px;
             height: 280px;
+          }
+
+          .tab-container {
+            max-width: 300;
+            min-width: 300px;
+            margin: 10px 0px 10px 0 !important;
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            align-content: center !important;
+            align-items: center !important;
           }
 
           .tab-panel {

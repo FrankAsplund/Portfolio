@@ -260,23 +260,6 @@ export default function Infobox() {
             align-items: center;
           }
 
-          @keyframes glowing {
-            0% {
-              text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
-            }
-            50% {
-              text-shadow: none;
-            }
-            100% {
-              text-shadow: 0 0 2px #90caf9, 0 0 20px #90caf9, 0 0 30px #90caf9;
-            }
-          }
-
-          .text {
-            animation: glowing 5s infinite;
-            color: #90caf9;
-          }
-
           @media only screen and (max-width: 900px) {
             .avatar-container {
               animation: bobbing 3s infinite alternate;

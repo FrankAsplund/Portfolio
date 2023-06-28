@@ -37,7 +37,7 @@ export default function Skills() {
         }}
       >
         <Typography gutterBottom variant="h3">
-          My skills
+          <span className="text">My skills</span>
         </Typography>
         <Typography
           gutterBottom

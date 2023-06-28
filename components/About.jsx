@@ -59,7 +59,7 @@ const About = () => {
         }}
       >
         <Typography gutterBottom variant="h3">
-          Hobbies and interests
+          <span className="text">Hobbies and interests</span>
         </Typography>
         <Typography gutterBottom variant="h5">
           Click on each card to learn more about what I do on my free time.
