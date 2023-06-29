@@ -170,7 +170,7 @@ export default function Infobox() {
               <span style={{ color: "#00d8ff" }}> CSS</span>, and
               <span style={{ color: "#ffee00" }}> JavaScript</span>, with a
               focus on modern front-end frameworks such as
-              <span style={{ color: "#00d8ff" }}> React </span>
+              <span style={{ color: "#00d8ff" }}> React.js </span>
               and
               <span style={{ color: "#42b883" }}> Vue.js</span>.
             </Typography>
@@ -192,6 +192,7 @@ export default function Infobox() {
             </Typography>
             <Container
               sx={{
+                mt: 2,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -308,7 +309,8 @@ export default function Infobox() {
               justify-content: center;
               align-items: center;
             }
-          }
+
+            
         `}
       </style>
     </div>

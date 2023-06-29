@@ -50,6 +50,21 @@ export default function Footer() {
               alt="Github"
             />
           </Link>
+          <Typography
+            variant="body1"
+            sx={{
+              my: 2,
+              px: 2,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+            component="div"
+          >
+            This project was created in VS Code with React.js, Next.js and
+            Material UI components.
+          </Typography>
 
           <Typography
             variant="body1"
@@ -58,11 +73,17 @@ export default function Footer() {
               px: 2,
               display: "flex",
               alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
             }}
             component="div"
           >
-            This project was created in Visual Studio Code with React.js, and
-            Next.js with Material UI components.
+            <Link
+              href="https://www.flaticon.com/free-icons/"
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Icons created by Freepik - Flaticon
+            </Link>
           </Typography>
 
           <div
@@ -103,6 +124,7 @@ export default function Footer() {
           border: 0.5px solid;
           border-radius: 15%;
           box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.05);
+          cursor: pointer;
         }
 
         @media only screen and (max-width: 900px) {

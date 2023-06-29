@@ -15,7 +15,14 @@
   color: #9292dc;
 } */
 
-.text {
+/* .text {
   animation: glowing 1s infinite;
-  color: #ff8c00;
-}
+  color: #4c77ed;
+  color: linear-gradient(#686868, #a5a5a5);
+
+  Next.js
+  color: "#a5a5a5"
+
+  Material UI
+  color: "#4c77ed"
+} */

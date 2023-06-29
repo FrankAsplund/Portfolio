@@ -56,6 +56,7 @@ const About = () => {
           display: "grid",
           justifyItems: "center",
           flexWrap: "wrap",
+          textAlign: "center",
         }}
       >
         <Typography gutterBottom variant="h3">

@@ -37,7 +37,9 @@ export default function Skills() {
         }}
       >
         <Typography gutterBottom variant="h3">
-          <span className="text">My skills</span>
+          <span className="text" sx={{ textAlign: "center" }}>
+            My skills
+          </span>
         </Typography>
         <Typography
           gutterBottom
@@ -46,6 +48,7 @@ export default function Skills() {
             display: "grid",
             justifyContent: "center",
             justifyItems: "center",
+            textAlign: "center",
           }}
         >
           These are the technologies, frameworks, and languages I have
@@ -181,5 +184,20 @@ const skillsData = [
     id: 17,
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
     alt: "MySQL",
+  },
+  {
+    id: 18,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    alt: "VS Code",
+  },
+  {
+    id: 19,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+    alt: "Trello",
+  },
+  {
+    id: 20,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+    alt: "Slack",
   },
 ];

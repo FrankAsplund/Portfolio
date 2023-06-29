@@ -39,6 +39,7 @@ export default function Work() {
             display: "grid",
             justifyItems: "center",
             flexWrap: "wrap",
+            textAlign: "center",
           }}
         >
           <Typography gutterBottom variant="h3">
@@ -49,6 +50,7 @@ export default function Work() {
               display: "flex",
               justifyContent: "center",
               justifyItems: "center",
+              textAlign: "center",
             }}
           >
             <Typography gutterBottom variant="h5">
@@ -82,13 +84,14 @@ export default function Work() {
             </Stack>
 
             <div className="tab-container glass">
-              <div className="tab-padding">
+              <div className="tab-padding" sx={{ textAlign: "center" }}>
                 <TabPanel value="1">
                   <Container
                     sx={{
                       display: "grid",
                       justifyItems: "center",
                       flexWrap: "wrap",
+                      textAlign: "center",
                     }}
                   >
                     <Typography variant="h4">
@@ -109,6 +112,7 @@ export default function Work() {
                       display: "grid",
                       justifyItems: "center",
                       flexWrap: "wrap",
+                      textAlign: "center",
                     }}
                   >
                     <Typography variant="h4">2021 – 2023, Stockholm</Typography>
@@ -128,6 +132,7 @@ export default function Work() {
                       display: "grid",
                       justifyItems: "center",
                       flexWrap: "wrap",
+                      textAlign: "center",
                     }}
                   >
                     <Typography variant="h4">
@@ -147,6 +152,7 @@ export default function Work() {
                       display: "grid",
                       justifyItems: "center",
                       flexWrap: "wrap",
+                      textAlign: "center",
                     }}
                   >
                     <Typography variant="h4">2017 – 2018, Skövde</Typography>
@@ -165,6 +171,7 @@ export default function Work() {
                       display: "grid",
                       justifyItems: "center",
                       flexWrap: "wrap",
+                      textAlign: "center",
                     }}
                   >
                     <Typography variant="h4">2014 – 2017, Stockholm</Typography>

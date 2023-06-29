@@ -256,22 +256,11 @@ export default function Home() {
             margin-bottom: 4rem;
           }
 
-          /* .tab-panel Container {
-            height: auto;
-            width: auto;
-            grid-template-columns: 1fr;
-            display: flex;
-            flex-direction: column;
+          .css-18iliqe-MuiStack-root {
+            text-align: center !important;
+            padding-left: 5px !important;
+            padding-right: 5px !important;
           }
-
-          .css-heg063-MuiTabs-flexContainer {
-            display: flex !important;
-            flex-wrap: wrap !important;
-            justify-content: center !important;
-            align-content: center !important;
-            align-items: center !important ;
-            flex-direction: column !important;
-          } */
         }
       `}</style>
       {/* rgba(36, 58, 117, 0.769); */}

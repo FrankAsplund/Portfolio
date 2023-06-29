@@ -67,11 +67,12 @@ export default function Contact() {
             variant="h3"
             sx={{
               mt: 2,
+              textAlign: "center",
             }}
           >
             I'd love to get to know you.
           </Typography>
-          <Typography gutterBottom variant="body1">
+          <Typography gutterBottom variant="body1" sx={{ textAlign: "center" }}>
             Send me an email if you have any inquries, questions, or just
             anything at all. I'm always interested in hearing about new
             technologies, getting to know new people, or just using this mail
