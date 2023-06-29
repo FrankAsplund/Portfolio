@@ -17,22 +17,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 
-{
-  /* <Grid item spacing={4} p={2} m={2}>
-          <Link href="https://www.flaticon.com/free-icons/gym" underline="none">
-            Icons created by Freepik - Flaticon
-          </Link>
-        </Grid> */
-}
-
 const handleScrollTotop = () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 export default function Footer() {
-  /* useEffect(() => {
-    AOS.init();
-  }, []); */
   return (
     <main>
       <footer className="glass footer">

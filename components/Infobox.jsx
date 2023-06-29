@@ -199,7 +199,7 @@ export default function Infobox() {
               }}
             >
               <div className="down-arrow hover arrow-png">
-                <SmoothScrollButton /* className="arrow-png" */ href="#about">
+                <SmoothScrollButton href="#about">
                   <Avatar
                     src="/images/down-chevron.png"
                     sx={{

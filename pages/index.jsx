@@ -10,10 +10,8 @@ import Navbar from "../components/Navbar";
 import Infobox from "../components/Infobox";
 import About from "../components/About";
 import Skills from "../components/Skills";
-/* import Projects from "../components/Projects"; */
 import Footer from "../components/Footer";
 import Work from "../components/Work";
-
 import Contact from "../components/Contact";
 
 import "@fontsource/roboto/300.css";
