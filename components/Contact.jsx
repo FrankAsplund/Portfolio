@@ -11,6 +11,7 @@ import { Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import SendIcon from "@mui/icons-material/Send";
+import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Contact() {
   const emailJsServiceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -19,8 +20,12 @@ export default function Contact() {
 
   const form = useRef();
 
+  const [loading, setLoading] = React.useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
+
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -38,7 +43,10 @@ export default function Contact() {
         (error) => {
           console.log(error.text);
         }
-      );
+      )
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -145,8 +153,9 @@ export default function Contact() {
                 value="Send"
                 size="large"
                 endIcon={<SendIcon />}
+                disabled={loading}
               >
-                Send me an email
+                {loading ? <CircularProgress size={24} /> : "Send me an email"}
               </Button>
             </Grid>
           </form>

@@ -197,11 +197,9 @@ export default function Infobox() {
                 alignItems: "center",
               }}
             >
-              <div className="down-arrow hover">
+              <div className="down-arrow">
                 <SmoothScrollButton className="arrow-png" href="#about">
                   <Avatar
-                    className="hover"
-                    variant="rounded"
                     src="/images/down-chevron.png"
                     sx={{
                       width: 45,
@@ -249,9 +247,9 @@ export default function Infobox() {
           }
 
           .arrow-png {
-            color: black; /* Initial color of the arrow */
-            filter: drop-shadow(0 0 5px #90caf9); /* Simulated glowing effect */
-            animation: glowing 1.5s infinite alternate; /* Animation for the glowing effect */
+            color: black;
+            filter: drop-shadow(0 0 5px #90caf9);
+            animation: glowing 1.5s infinite alternate;
           }
 
           @keyframes glowing {
