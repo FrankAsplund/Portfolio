@@ -76,12 +76,14 @@ export default function Home() {
 
         .box {
           display: flex;
-          flex-direction: row;
+          flex-direction: row !important;
         }
 
         .avatarImg {
-          width: 350px;
-          height: 350px;
+          min-width: 350px !important;
+          min-height: 350px !important;
+          width: 350px !important;
+          height: 350px !important;
         }
 
         .avatar-box {
@@ -206,7 +208,7 @@ export default function Home() {
         @media only screen and (max-width: 900px) {
           .box {
             display: flex;
-            flex-direction: column;
+            flex-direction: column !important;
           }
 
           .tab-box {
@@ -224,8 +226,10 @@ export default function Home() {
           }
 
           .avatarImg {
-            width: 280px;
-            height: 280px;
+            min-width: 280px !important;
+            min-height: 280px !important;
+            width: 280px !important;
+            height: 280px !important;
           }
 
           .tab-container {

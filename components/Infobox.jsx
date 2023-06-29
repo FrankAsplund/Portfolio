@@ -145,7 +145,6 @@ export default function Infobox() {
 
           <Stack
             sx={{ py: 4, px: 6, m: 4 }}
-            useFlexGap
             flexWrap="wrap"
             data-aos-delay="500"
             data-aos="zoom-in"
