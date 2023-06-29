@@ -184,7 +184,7 @@ export default function Home() {
         .tab-box {
           display: flex;
           align-items: stretch;
-          flex-direction: row;
+          flex-direction: row !important;
           justify-content: center;
         }
 
@@ -214,7 +214,7 @@ export default function Home() {
           .tab-box {
             display: flex;
             align-items: center;
-            flex-direction: column;
+            flex-direction: column !important;
           }
 
           .avatar-box {
