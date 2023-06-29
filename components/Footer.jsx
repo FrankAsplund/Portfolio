@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -36,9 +37,20 @@ export default function Footer() {
     <main>
       <footer className="glass footer">
         <div className="footerItems">
-          <Typography variant="h4" component="div">
-            Frank Asplund
-          </Typography>
+          <Link
+            className="glass hoverShadow"
+            href="https://github.com/FrankAsplund/Portfolio"
+            underline="none"
+            mx={2}
+          >
+            <Image
+              height={50}
+              width={50}
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="Github"
+            />
+          </Link>
+
           <Typography
             variant="body1"
             sx={{
@@ -54,7 +66,7 @@ export default function Footer() {
           </Typography>
 
           <div
-            className="hover arrow"
+            className="hover arrow glass"
             elevation={24}
             onClick={handleScrollTotop}
           >
