@@ -122,6 +122,7 @@ export default function Home() {
 
         .hoverShadow {
           transition: transform 0.15s;
+          cursor: pointer;
         }
 
         /* .text {

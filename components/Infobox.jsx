@@ -47,7 +47,7 @@ const SmoothScrollButton = ({ href, children }) => {
       duration={500} // Adjust the duration as desired
       onClick={handleClick}
     >
-      <Button>{children}</Button>
+      {children}
     </ScrollLink>
   );
 };
@@ -197,8 +197,8 @@ export default function Infobox() {
                 alignItems: "center",
               }}
             >
-              <div className="down-arrow">
-                <SmoothScrollButton className="arrow-png" href="#about">
+              <div className="down-arrow hover arrow-png">
+                <SmoothScrollButton /* className="arrow-png" */ href="#about">
                   <Avatar
                     src="/images/down-chevron.png"
                     sx={{
@@ -247,9 +247,18 @@ export default function Infobox() {
           }
 
           .arrow-png {
-            color: black;
+            color: white;
+            cursor: pointer;
+          }
+
+          .arrow-png:hover {
+            color: white;
             filter: drop-shadow(0 0 5px #90caf9);
             animation: glowing 1.5s infinite alternate;
+            animation: bobbing 3s infinite alternate;
+          }
+
+          .down-arrow Button {
           }
 
           @keyframes glowing {
