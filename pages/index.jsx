@@ -168,7 +168,6 @@ export default function Home() {
 
         .tab-container {
           max-width: 700px;
-          min-width: 700px;
           margin: 0 !important;
           display: flex !important;
           flex-wrap: wrap !important;
