@@ -284,7 +284,6 @@ export default function Infobox() {
           }
 
           .avatar span {
-            position: absolute;
             width: 100%;
             height: 100%;
             background: linear-gradient(
@@ -308,8 +307,7 @@ export default function Infobox() {
               justify-content: center;
               align-items: center;
             }
-
-            
+          }
         `}
       </style>
     </div>
