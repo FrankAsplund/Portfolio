@@ -68,14 +68,13 @@ const About = () => {
 
         <Grid
           container
-          rowSpacing={1}
           spacing={0}
           minHeight={160}
           columns={2}
           justifyContent="center"
           alignItems="center"
         >
-          <Grid item spacing={4} p={2} m={2}>
+          <Grid item spacing={4} m={2} className="cardHoverShadow">
             <ReactCardFlip
               isFlipped={cardStates[0].isFlipped}
               flipDirection="horizontal"
@@ -83,7 +82,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(0)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -103,7 +102,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(0)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -134,7 +133,7 @@ const About = () => {
             </ReactCardFlip>
           </Grid>
 
-          <Grid item spacing={4} p={2} m={2}>
+          <Grid item spacing={4} m={2} className="cardHoverShadow">
             <ReactCardFlip
               isFlipped={cardStates[1].isFlipped}
               flipDirection="horizontal"
@@ -142,7 +141,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(1)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -162,7 +161,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(1)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -194,7 +193,7 @@ const About = () => {
             </ReactCardFlip>
           </Grid>
 
-          <Grid item spacing={4} p={2} m={2}>
+          <Grid item spacing={4} m={2} className="cardHoverShadow">
             <ReactCardFlip
               isFlipped={cardStates[2].isFlipped}
               flipDirection="horizontal"
@@ -202,7 +201,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(2)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -223,7 +222,7 @@ const About = () => {
                 <Paper
                   onClick={() => handleClick(2)}
                   elevation={24}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   sx={{
                     py: 10,
                     width: 278,
@@ -253,7 +252,7 @@ const About = () => {
               </div>
             </ReactCardFlip>
           </Grid>
-          <Grid item spacing={4} p={2} m={2}>
+          <Grid item spacing={4} m={2} className="cardHoverShadow">
             <ReactCardFlip
               isFlipped={cardStates[3].isFlipped}
               flipDirection="horizontal"
@@ -261,7 +260,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -281,7 +280,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(3)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     py: 10,
@@ -313,7 +312,7 @@ const About = () => {
             </ReactCardFlip>
           </Grid>
 
-          <Grid item spacing={4} p={2} m={2}>
+          <Grid item spacing={4} m={2} className="cardHoverShadow">
             <ReactCardFlip
               isFlipped={cardStates[4].isFlipped}
               flipDirection="horizontal"
@@ -321,7 +320,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     p: 8,
@@ -341,7 +340,7 @@ const About = () => {
               <div>
                 <Paper
                   onClick={() => handleClick(4)}
-                  className="glass hoverShadow"
+                  className="cardGlass"
                   elevation={24}
                   sx={{
                     py: 10,

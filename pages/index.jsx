@@ -105,6 +105,14 @@ export default function Home() {
 
         .glass {
           /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.07);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cardGlass {
+          /* From https://css.glass */
           background: rgba(255, 255, 255, 0.07) !important;
           border-radius: 16px !important;
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
@@ -134,11 +142,17 @@ export default function Home() {
           -webkit-text-fill-color: transparent;
         } */
 
-        /* Vit? */
-        /* .hoverShadow:hover {
+        .cardHoverShadow {
+          border-radius: 16px !important;
+          margin: 2rem !important;
+          transition: transform 0.15s;
+          cursor: pointer;
+        }
+
+        .cardHoverShadow:hover {
           transform: scale(1.03);
-          box-shadow: 0 0 1rem rgba(255, 255, 255, 0.2);
-        } */
+          box-shadow: 0 0 1rem rgba(80, 106, 176, 0.769);
+        }
 
         .hoverShadow:hover {
           transform: scale(1.03);
