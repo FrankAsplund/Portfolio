@@ -18,6 +18,10 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Skills() {
+  const filteredSkills = skillsData.filter(
+    (skill) => skill.id === 21 || skill.id === 22
+  );
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -25,8 +29,8 @@ export default function Skills() {
     <main
       id="skills"
       className="container-box"
-      data-aos-delay="100"
       data-aos="fade-up"
+      data-aos-delay="100"
       data-aos-duration="2000"
     >
       <Container
@@ -83,6 +87,97 @@ export default function Skills() {
               </div>
             </Grid>
           ))}
+          <Container
+            data-aos="zoom-in-up"
+            sx={{
+              mt: "8rem",
+              mb: "8rem",
+              display: "grid",
+              justifyItems: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            <Typography
+              gutterBottom
+              variant="h3"
+              sx={{
+                display: "grid",
+                justifyContent: "center",
+                justifyItems: "center",
+                textAlign: "center",
+              }}
+            >
+              <span className="text" sx={{ textAlign: "center" }}>
+                Coming soon...
+              </span>
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="body1"
+              color="grey"
+              sx={{
+                display: "grid",
+                justifyContent: "center",
+                justifyItems: "center",
+                textAlign: "center",
+              }}
+            >
+              Stay tuned!
+            </Typography>
+            <Grid
+              container
+              rowSpacing={1}
+              spacing={0}
+              minHeight={160}
+              columns={2}
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Grid item spacing={4} p={2} m={2}>
+                <div className="hover">
+                  <Image
+                    height={75}
+                    width={75}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt="Typescript"
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      display: "grid",
+                      mt: "10px",
+                      justifyItems: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    Typescript
+                  </Typography>
+                </div>
+              </Grid>
+
+              <Grid item spacing={4} p={2} m={2}>
+                <div className="hover">
+                  <Image
+                    height={75}
+                    width={75}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
+                    alt="Redux"
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      display: "grid",
+                      mt: "10px",
+                      justifyItems: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    Redux
+                  </Typography>
+                </div>
+              </Grid>
+            </Grid>
+          </Container>
         </Grid>
       </Container>
       <style jsx>{`
@@ -200,4 +295,14 @@ const skillsData = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
     alt: "Slack",
   },
+  /* {
+    id: 21,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg",
+    alt: "Typescript",
+  },
+  {
+    id: 22,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    alt: "Redux",
+  }, */
 ];
