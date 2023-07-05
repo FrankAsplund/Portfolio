@@ -125,6 +125,7 @@ export default function Skills() {
               Stay tuned!
             </Typography>
             <Grid
+              my={2}
               container
               rowSpacing={1}
               spacing={0}
@@ -173,6 +174,27 @@ export default function Skills() {
                     }}
                   >
                     Redux
+                  </Typography>
+                </div>
+              </Grid>
+              <Grid item spacing={4} p={2} m={2}>
+                <div className="hover">
+                  <Image
+                    height={75}
+                    width={75}
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
+                    alt="Tailwind"
+                  />
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      display: "grid",
+                      mt: "10px",
+                      justifyItems: "center",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    Tailwind
                   </Typography>
                 </div>
               </Grid>
