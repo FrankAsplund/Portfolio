@@ -70,12 +70,12 @@ const Navbar = () => {
                 <SmoothScrollButton href="#contact">Contact</SmoothScrollButton>
                 <Button
                   variant="text"
-                  className="glass hover"
+                  className="cardGlass hover"
                   sx={{ px: 2, mx: 2 }}
                   size="large"
                   onClick={() =>
                     window.open(
-                      "https://github.com/FrankAsplund/my-cv/raw/3fe04fb525d12dc42fb8608e13fb0e8de0475099/CV-FrankAsplund%202023.pdf",
+                      "https://github.com/FrankAsplund/my-cv/raw/878e4f560817b5bef7c733f04f41617c13da5010/CV-FrankAsplund%202023%20(English).pdf",
                       "_blank"
                     )
                   }
