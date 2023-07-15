@@ -139,28 +139,6 @@ export default function Skills() {
                   <Image
                     height={75}
                     width={75}
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-                    alt="Typescript"
-                  />
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      display: "grid",
-                      mt: "10px",
-                      justifyItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    Typescript
-                  </Typography>
-                </div>
-              </Grid>
-
-              <Grid item spacing={4} p={2} m={2}>
-                <div className="hover">
-                  <Image
-                    height={75}
-                    width={75}
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
                     alt="Redux"
                   />
@@ -174,27 +152,6 @@ export default function Skills() {
                     }}
                   >
                     Redux
-                  </Typography>
-                </div>
-              </Grid>
-              <Grid item spacing={4} p={2} m={2}>
-                <div className="hover">
-                  <Image
-                    height={75}
-                    width={75}
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg"
-                    alt="Tailwind"
-                  />
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      display: "grid",
-                      mt: "10px",
-                      justifyItems: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    Tailwind
                   </Typography>
                 </div>
               </Grid>
@@ -317,14 +274,14 @@ const skillsData = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
     alt: "Slack",
   },
-  /* {
+  {
     id: 21,
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adonisjs/adonisjs-original.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
     alt: "Typescript",
   },
   {
     id: 22,
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-    alt: "Redux",
-  }, */
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+    alt: "Tailwind",
+  },
 ];

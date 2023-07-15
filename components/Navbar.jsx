@@ -75,7 +75,7 @@ const Navbar = () => {
                   size="large"
                   onClick={() =>
                     window.open(
-                      "https://github.com/FrankAsplund/my-cv/raw/878e4f560817b5bef7c733f04f41617c13da5010/CV-FrankAsplund%202023%20(English).pdf",
+                      "https://github.com/FrankAsplund/my-cv/raw/8f9ad2196c63f8692852c10183a71f70b7cc5585/CV-FrankAsplund%202023%20(English).pdf",
                       "_blank"
                     )
                   }
