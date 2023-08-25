@@ -220,16 +220,16 @@ export default function Home() {
         }
 
         .project-container {
-          width: 700px;
-          height: 500px;
+          width: 700px !important;
+          height: 500px !important;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
         .project-pic {
-          width: 700px;
-          height: 500px;
+          width: 700px !important;
+          height: 500px !important;
         }
 
         @media only screen and (max-width: 900px) {
@@ -292,16 +292,16 @@ export default function Home() {
           }
 
           .project-container {
-            width: 310px;
-            height: 310px;
+            width: 310px !important;
+            height: 310px !important;
             display: flex;
             justify-content: center;
             align-items: center;
           }
 
           .project-pic {
-            width: 310px;
-            height: 310px;
+            width: 310px !important;
+            height: 310px !important;
           }
         }
       `}</style>
