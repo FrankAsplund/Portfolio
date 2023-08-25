@@ -87,7 +87,7 @@ export default function Skills() {
               </div>
             </Grid>
           ))}
-          <Container
+          {/* <Container
             data-aos="zoom-in-up"
             sx={{
               mt: "8rem",
@@ -156,7 +156,7 @@ export default function Skills() {
                 </div>
               </Grid>
             </Grid>
-          </Container>
+          </Container> */}
         </Grid>
       </Container>
       <style jsx>{`
@@ -283,5 +283,10 @@ const skillsData = [
     id: 22,
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
     alt: "Tailwind",
+  },
+  {
+    id: 23,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+    alt: "Redux",
   },
 ];

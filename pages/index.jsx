@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar";
 import Infobox from "../components/Infobox";
 import About from "../components/About";
 import Skills from "../components/Skills";
+import Projects from "../components/Projects";
 import Footer from "../components/Footer";
 import Work from "../components/Work";
 import Contact from "../components/Contact";
@@ -35,6 +36,7 @@ export default function Home() {
           <Infobox />
           <About />
           <Skills />
+          <Projects />
           <Work />
 
           <Contact />
@@ -217,6 +219,19 @@ export default function Home() {
           color: #90caf9;
         }
 
+        .project-container {
+          width: 700px;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .project-pic {
+          width: 700px;
+          height: 500px;
+        }
+
         @media only screen and (max-width: 900px) {
           .box {
             display: flex;
@@ -274,6 +289,19 @@ export default function Home() {
             text-align: center !important;
             padding-left: 5px !important;
             padding-right: 5px !important;
+          }
+
+          .project-container {
+            width: 310px;
+            height: 310px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .project-pic {
+            width: 310px;
+            height: 310px;
           }
         }
       `}</style>

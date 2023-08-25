@@ -5,6 +5,7 @@ import "@fontsource/roboto/700.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 import Paper from "@mui/material/Paper";
 import Container from "@mui/material/Container";
@@ -22,7 +23,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <main data-aos="zoom-in-up" data-aos-duration="4000">
+    <main data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
       <Container
         sx={{
           display: "grid",
@@ -30,10 +31,13 @@ const Projects = () => {
           mb: "4rem",
           justifyItems: "center",
           flexWrap: "wrap",
+          textAlign: "center",
         }}
       >
         <Typography gutterBottom variant="h3">
-          Some projects I've made
+          <span className="text" sx={{ textAlign: "center" }}>
+            Currently deployed projects
+          </span>
         </Typography>
 
         <Grid
@@ -46,88 +50,57 @@ const Projects = () => {
           alignItems="center"
         >
           <Grid item spacing={4} p={2} m={2}>
-            <Paper
-              elevation={24}
+            <Typography
+              gutterBottom
+              variant="h4"
               sx={{
-                p: 8,
-                width: 400,
-                height: 400,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <Typography
-                gutterBottom
-                variant="h4"
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Svinneriet
-              </Typography>
-              <Avatar
-                variant="rounded"
-                src="/images/guitar.png"
-                sx={{ width: 150, height: 150 }}
-                alt="Pic"
-              />
-
-              <Typography
-                gutterBottom
-                variant="h6"
-                sx={{
-                  width: 150,
-                  height: 150,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Project done in React, with backend etc
-              </Typography>
-            </Paper>
-          </Grid>
-          <Grid item spacing={4} p={2} m={2}>
-            <Paper
-              elevation={24}
+              🎵 The Music Rater 🎵
+            </Typography>
+            <Link
+              className="project-container"
+              href="https://music-rater-navy.vercel.app/"
               sx={{
-                p: 8,
-                width: 400,
-                height: 400,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <Typography
-                gutterBottom
-                variant="h2"
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Examensarbete
-              </Typography>
               <Avatar
+                className="cardHoverShadow project-pic"
                 variant="rounded"
-                src="/images/guitar.png"
-                sx={{ width: 150, height: 150 }}
+                src="/images/musicraterTS.jpg"
                 alt="Pic"
               />
-
-              <Typography
-                gutterBottom
-                variant="h6"
-                sx={{
-                  width: 150,
-                  height: 150,
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Project done in Vue 3, with Vuetify with backend etc
-              </Typography>
-            </Paper>
+            </Link>
+            <Typography
+              gutterBottom
+              variant="text-sm"
+              sx={{
+                mt: "1rem",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Project done in Typescript, React.js, Next.js, with Tailwind CSS.
+              Deployed with Vercel.
+            </Typography>
+            <Typography
+              gutterBottom
+              variant="text-sm"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              Still a work in progress, but feel free to try it out!
+            </Typography>
           </Grid>
         </Grid>
       </Container>
@@ -139,6 +112,34 @@ const Projects = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+        }
+
+        .project-container {
+          width: 700px;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .project-pic {
+          width: 700px;
+          height: 500px;
+        }
+
+        @media only screen and (max-width: 900px) {
+          .project-container {
+            width: 310px;
+            height: 310px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .project-pic {
+            width: 310px;
+            height: 310px;
+          }
         }
       `}</style>
     </main>
