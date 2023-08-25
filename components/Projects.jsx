@@ -73,7 +73,7 @@ const Projects = () => {
               <Avatar
                 className="cardHoverShadow project-pic"
                 variant="rounded"
-                src="/images/musicraterTS.jpg"
+                src="/images/musicraterTS.png"
                 alt="Pic"
               />
             </Link>
