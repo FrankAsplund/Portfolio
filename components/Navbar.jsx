@@ -64,6 +64,9 @@ const Navbar = () => {
                 <SmoothScrollButton href="#navbar">Home</SmoothScrollButton>
                 <SmoothScrollButton href="#about">About Me</SmoothScrollButton>
                 <SmoothScrollButton href="#skills">Skills</SmoothScrollButton>
+                <SmoothScrollButton href="#projects">
+                  Projects
+                </SmoothScrollButton>
                 <SmoothScrollButton href="#experience">
                   Experience
                 </SmoothScrollButton>

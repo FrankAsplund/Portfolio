@@ -23,7 +23,12 @@ const Projects = () => {
   }, []);
 
   return (
-    <main data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
+    <main
+      data-aos="fade-up"
+      data-aos-delay="100"
+      data-aos-duration="2000"
+      id="projects"
+    >
       <Container
         sx={{
           display: "grid",
