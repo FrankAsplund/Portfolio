@@ -27,7 +27,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Frank Asplund</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fa-favicon3.png" />
       </Head>
 
       <main className="bg-grad">
