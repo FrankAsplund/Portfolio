@@ -122,6 +122,12 @@ export default function Home() {
         }
 
         .hover {
+          -webkit-transition: -webkit-transform.15s;
+          -moz-transition: -moz-transform.15s;
+          -o-transition: -o-transform.15s;
+          transition: -webkit-transform.15s;
+          transition: -moz-transform.15s;
+          transition: -o-transform.15s;
           transition: transform 0.15s;
         }
 

@@ -65,19 +65,28 @@ const Navbar = () => {
                 <Image
                   height={50}
                   width={50}
-                  src="/../public/fa-favicon3.png"
+                  className="hover"
+                  src="/../public/images/fa-favicon3.png"
                   alt="Icon"
                 />
-                <SmoothScrollButton href="#navbar">Home</SmoothScrollButton>
-                <SmoothScrollButton href="#about">About Me</SmoothScrollButton>
-                <SmoothScrollButton href="#skills">Skills</SmoothScrollButton>
-                <SmoothScrollButton href="#projects">
+                <SmoothScrollButton className="hover" href="#navbar">
+                  Home
+                </SmoothScrollButton>
+                <SmoothScrollButton className="hover" href="#about">
+                  About Me
+                </SmoothScrollButton>
+                <SmoothScrollButton className="hover" href="#skills">
+                  Skills
+                </SmoothScrollButton>
+                <SmoothScrollButton className="hover" href="#projects">
                   Projects
                 </SmoothScrollButton>
-                <SmoothScrollButton href="#experience">
+                <SmoothScrollButton className="hover" href="#experience">
                   Experience
                 </SmoothScrollButton>
-                <SmoothScrollButton href="#contact">Contact</SmoothScrollButton>
+                <SmoothScrollButton className="hover" href="#contact">
+                  Contact
+                </SmoothScrollButton>
                 <Button
                   variant="text"
                   className="cardGlass hover"
