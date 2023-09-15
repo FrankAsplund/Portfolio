@@ -66,26 +66,26 @@ const Navbar = () => {
                   height={50}
                   width={50}
                   className="hover"
-                  src="/../public/images/fa-favicon3.png"
+                  src="/images/fa-favicon3.png"
                   alt="Icon"
                 />
-                <SmoothScrollButton className="hover" href="#navbar">
-                  Home
+                <SmoothScrollButton href="#navbar">
+                  <div className="hover">Home</div>
                 </SmoothScrollButton>
                 <SmoothScrollButton className="hover" href="#about">
-                  About Me
+                  <div className="hover">About Me</div>
                 </SmoothScrollButton>
                 <SmoothScrollButton className="hover" href="#skills">
-                  Skills
+                  <div className="hover">Skills</div>
                 </SmoothScrollButton>
                 <SmoothScrollButton className="hover" href="#projects">
-                  Projects
+                  <div className="hover">Projects</div>
                 </SmoothScrollButton>
                 <SmoothScrollButton className="hover" href="#experience">
-                  Experience
+                  <div className="hover">Experience</div>
                 </SmoothScrollButton>
                 <SmoothScrollButton className="hover" href="#contact">
-                  Contact
+                  <div className="hover">Contact</div>
                 </SmoothScrollButton>
                 <Button
                   variant="text"
@@ -99,7 +99,7 @@ const Navbar = () => {
                     )
                   }
                 >
-                  Download Resume
+                  <div className="hover">Download Resume</div>
                 </Button>
               </div>
             </div>
