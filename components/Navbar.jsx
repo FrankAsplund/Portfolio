@@ -9,6 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Stack from "@mui/material/Stack";
 
 import { Link } from "react-scroll";
+import Image from "next/image";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -61,6 +62,12 @@ const Navbar = () => {
           <Toolbar>
             <div className="navbarContainer">
               <div className="navbarItems">
+                <Image
+                  height={50}
+                  width={50}
+                  src="/../public/fa-favicon3.png"
+                  alt="Icon"
+                />
                 <SmoothScrollButton href="#navbar">Home</SmoothScrollButton>
                 <SmoothScrollButton href="#about">About Me</SmoothScrollButton>
                 <SmoothScrollButton href="#skills">Skills</SmoothScrollButton>
@@ -117,12 +124,22 @@ const Navbar = () => {
             flex-direction: row;
           }
 
-          @media only screen and (max-width: 900px) {
+          @media only screen and (max-width: 1100px) {
             .navbar {
               display: flex;
               justify-content: space-between;
               align-items: center;
               flex-wrap: wrap;
+            }
+
+            .navbarContainer {
+              display: flex;
+              width: 100% !important;
+              padding: 1rem 0 1rem 0;
+              margin: 0.5rem 1rem 0.5rem 0.5rem;
+              justify-content: center !important;
+              align-items: center;
+              flex-direction: row;
             }
 
             .navbarItems {
