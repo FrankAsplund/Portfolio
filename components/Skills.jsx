@@ -87,7 +87,7 @@ export default function Skills() {
               </div>
             </Grid>
           ))}
-          {/* <Container
+          <Container
             data-aos="zoom-in-up"
             sx={{
               mt: "8rem",
@@ -139,8 +139,8 @@ export default function Skills() {
                   <Image
                     height={75}
                     width={75}
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg"
-                    alt="Redux"
+                    src="/images/oauth-2-sm.png"
+                    alt="OAuth2.0"
                   />
                   <Typography
                     variant="h6"
@@ -151,12 +151,12 @@ export default function Skills() {
                       flexWrap: "wrap",
                     }}
                   >
-                    Redux
+                    OAuth2.0
                   </Typography>
                 </div>
               </Grid>
             </Grid>
-          </Container> */}
+          </Container>
         </Grid>
       </Container>
       <style jsx>{`
